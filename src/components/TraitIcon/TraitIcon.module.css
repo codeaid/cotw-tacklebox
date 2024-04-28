@@ -1,0 +1,8 @@
+.TraitIcon {
+  transition: filter 100ms ease-in-out, transform 100ms ease-in-out;
+}
+
+.TraitIcon:hover {
+  filter: var(--dropshadow-default);
+  transform: scale(1.08);
+}
