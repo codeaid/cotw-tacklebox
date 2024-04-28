@@ -2,7 +2,7 @@
 const nextConfig = {
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
-  distDir: 'out',
+  output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
@@ -17,4 +17,4 @@ const nextConfig = {
   }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
