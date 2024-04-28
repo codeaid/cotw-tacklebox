@@ -1,0 +1,50 @@
+.Header {
+  background-color: var(--color-bg-dark);
+  position: relative;
+}
+
+.HeaderHighlight {
+  background-image: url("./assets/background.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.HeaderLinkList {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: inherit;
+  z-index: 2;
+}
+
+.HeaderLinkItem {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1em;
+  margin: 0;
+  padding: 1rem;
+}
+
+.HeaderLink {
+  color: var(--font-color-muted);
+  line-height: inherit;
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+}
+
+.HeaderLinkActive,
+.HeaderLink:hover {
+  color: var(--font-color);
+}
