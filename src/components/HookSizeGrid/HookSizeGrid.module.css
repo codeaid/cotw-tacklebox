@@ -1,0 +1,81 @@
+.HookSizeGrid {
+  border-radius: 0.2em;
+  display: grid;
+  grid-gap: 0.25em;
+  grid-template-columns: repeat(14, 1fr);
+  user-select: none;
+  width: 100%;
+}
+
+.HookSizeGridCell {
+  background-color: var(--color-bg-dark);
+  background-position: center;
+  border-radius: 0.2em;
+  color: var(--font-color-muted);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.HookSizeGridCellBronze {
+  background: var(--color-rank-bronze);
+  background: linear-gradient(
+      180deg,
+      var(--color-rank-bronze-dark) 0%,
+      var(--color-rank-bronze) 100%);
+  color: var(--font-color);
+}
+
+.HookSizeGridCellSilver {
+  background: var(--color-rank-silver);
+  background: linear-gradient(
+      180deg,
+      var(--color-rank-silver-dark) 0%,
+      var(--color-rank-silver) 100%);
+  color: var(--font-color);
+}
+
+.HookSizeGridCellGold {
+  background: var(--color-rank-gold);
+  background: linear-gradient(
+      180deg,
+      var(--color-rank-gold-dark) 0%,
+      var(--color-rank-gold) 100%);
+  color: var(--font-color);
+}
+
+.HookSizeGridCellDiamond {
+  background: var(--color-rank-diamond);
+  background: linear-gradient(
+      180deg,
+      var(--color-rank-diamond-dark) 0%,
+      var(--color-rank-diamond) 100%);
+  color: var(--font-color);
+}
+
+.HookSizeGridCellLegendary {
+  background: var(--color-rank-legendary);
+  background: linear-gradient(
+      180deg,
+      var(--color-rank-legendary-dark) 0%,
+      var(--color-rank-legendary) 100%);
+  color: var(--font-color);
+}
+
+@media (max-width: 1024px) {
+  .HookSizeGrid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .HookSizeGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .HookSizeGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
