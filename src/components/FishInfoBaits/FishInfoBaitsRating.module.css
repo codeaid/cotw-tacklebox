@@ -1,0 +1,39 @@
+.FishInfoBaitsRating {
+  display: inline-flex;
+  height: 1em;
+  margin: 0 0.2em;
+  user-select: none;
+}
+
+.FishInfoBaitsRatingItem {
+  background-color: var(--color-border);
+  border-radius: 50%;
+  display: block;
+  height: 1em;
+  margin: 0 0.1em;
+  width: 1em;
+}
+
+.FishInfoBaitsRatingBronze {
+  background-color: var(--color-rank-bronze);
+}
+
+.FishInfoBaitsRatingSilver {
+  background-color: var(--color-rank-silver);
+  font-size: 1.1em;
+}
+
+.FishInfoBaitsRatingGold {
+  background-color: var(--color-rank-gold);
+  font-size: 1.2em;
+}
+
+.FishInfoBaitsRatingDiamond {
+  background-color: var(--color-rank-diamond);
+  font-size: 1.2em;
+}
+
+.FishInfoBaitsRatingLegendary {
+  background-color: var(--color-rank-legendary);
+  font-size: 1.2em;
+}

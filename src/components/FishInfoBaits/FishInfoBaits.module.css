@@ -1,0 +1,205 @@
+.FishInfoBaits {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+/**
+ * Bait and lure category headers
+ */
+.FishInfoBaitsCategoryHeader {
+  align-items: center;
+  border-bottom: thin solid var(--color-border);
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 1.2em;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1em;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+}
+
+.FishInfoBaitsCategoryHeaderBaits,
+.FishInfoBaitsCategoryHeaderLures {
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 2em;
+}
+
+.FishInfoBaitsCategoryHeaderBaits {
+  background-image: url("../../assets/categories/baits.png");
+}
+
+.FishInfoBaitsCategoryHeaderLures {
+  background-image: url("../../assets/categories/lures.png");
+}
+
+/**
+ * Wrapper of all three bait kind tables
+ */
+.FishInfoBaitsCategoryWrapperBaits {
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/**
+ * Wrappers of individual bait kind table sections
+ */
+.FishInfoBaitsKindWrapperBottom {
+  order: 3;
+}
+
+.FishInfoBaitsKindWrapperLive {
+  order: 2;
+}
+
+.FishInfoBaitsKindWrapperNatural {
+  order: 1;
+}
+
+/**
+ * Bait kind and lure method table headers
+ */
+.FishInfoBaitsKindHeader,
+.FishInfoBaitsMethodHeader {
+  border-bottom: thin solid var(--color-border-medium);
+  font-size: 0.9em;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.5em;
+  opacity: 0.6;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+}
+
+.FishInfoBaitsKindHeaderBottom,
+.FishInfoBaitsKindHeaderLive,
+.FishInfoBaitsKindHeaderNatural {
+  background-position: right 0.2em center;
+  background-repeat: no-repeat;
+  background-size: 2em;
+}
+
+.FishInfoBaitsKindHeaderBottom {
+  background-image: url("../../assets/baits/bottom.png");
+}
+
+.FishInfoBaitsKindHeaderLive {
+  background-image: url("../../assets/baits/live.png");
+}
+
+.FishInfoBaitsKindHeaderNatural {
+  background-image: url("../../assets/baits/natural.png");
+}
+
+.FishInfoBaitsMethodHeader {
+  border-bottom: unset;
+  text-align: center;
+}
+
+/**
+ * Table rows containing bait names and chance columns
+ */
+.FishInfoBaitsRow,
+.FishInfoBaitsRowLures {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: 12em 1fr;
+}
+
+/**
+ * Table key and value cells
+ */
+.FishInfoBaitsKey {
+  font-weight: var(--font-weight-semibold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.FishInfoBaitsValue {
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+}
+
+.FishInfoBaitsValueEmpty {
+  color: var(--font-color-muted);
+  opacity: 0.5;
+}
+
+.FishInfoBaitsKey,
+.FishInfoBaitsValue {
+  padding: 0.3em 0;
+}
+
+/**
+ * Table row value cell wrapper
+ */
+.FishInfoBaitsValues {
+  border-bottom: thin solid var(--color-border-dark);
+}
+
+/**
+ * Lure row value cell wrapper
+ */
+.FishInfoBaitsValuesLures {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .FishInfoBaitsCategoryWrapperBaits {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .FishInfoBaitsRow {
+    grid-template-columns: 9em 1fr;
+  }
+
+  .FishInfoBaitsKindWrapperBottom {
+    order: 2;
+  }
+
+  .FishInfoBaitsKindWrapperLive {
+    order: 3;
+  }
+
+  .FishInfoBaitsKindWrapperNatural {
+    order: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .FishInfoBaitsCategoryWrapperBaits {
+    grid-template-columns: 1fr;
+  }
+
+  .FishInfoBaitsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .FishInfoBaitsRowLures {
+    grid-template-columns: 1fr;
+    margin-top: 1em;
+  }
+
+  .FishInfoBaitsRowLures:first-child {
+    grid-template-rows: 0 1fr;
+  }
+
+  .FishInfoBaitsValuesLures {
+    border: none;
+    font-size: 0.9em;
+  }
+
+  .FishInfoBaitsValuesLures .FishInfoBaitsValue {
+    border-right: thin solid var(--color-border-medium);
+  }
+
+  .FishInfoBaitsValuesLures .FishInfoBaitsValue:first-child {
+    border-left: thin solid var(--color-border-medium);
+  }
+}
