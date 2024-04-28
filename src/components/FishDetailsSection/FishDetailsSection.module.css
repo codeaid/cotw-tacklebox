@@ -1,0 +1,10 @@
+.FishDetailsSection {
+  margin-top: 2em;
+}
+
+.FishDetailsSectionHeading {
+  border-bottom: thin solid var(--color-border-dark);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding: 0 0 0.25em 0;
+}
