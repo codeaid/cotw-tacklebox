@@ -11,6 +11,7 @@ export * from './Footer';
 export * from './Grid';
 export * from './Header';
 export * from './Input';
+export * from './ReserveFishGrid';
 export * from './Separator';
 export * from './TraitIcon';
 export * from './TraitIconList';
