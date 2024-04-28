@@ -1,4 +1,5 @@
 export * from './Container';
+export * from './FishInfoDetails';
 export * from './FishInfoHeader';
 export * from './FishInfoHooks';
 export * from './FishInfoSection';

@@ -1,0 +1,29 @@
+.FishInfoDetailsItem {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: 6.5em 1fr;
+  margin: 0;
+}
+
+.FishInfoDetailsItemCaption {
+  font-weight: var(--font-weight-semibold);
+}
+
+.FishInfoDetailsItemChildren {
+  color: var(--color-primary);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .FishInfoDetailsItem {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .FishInfoDetailsItem {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
+}
