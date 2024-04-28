@@ -11,10 +11,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@nivo/boxplot": "^0.85.1",
+    "@nivo/core": "^0.85.1",
     "next": "14.2.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "use-resize-observer": "^9.1.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

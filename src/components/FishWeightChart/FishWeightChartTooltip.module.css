@@ -1,0 +1,13 @@
+.FishWeightChartTooltip {
+  background-color: var(--color-bg-dark);
+  border: thin solid var(--color-border-medium);
+  border-radius: 0.25em;
+  filter: var(--dropshadow-medium);
+  font-size: 0.8em;
+  padding: 0.25em 0.5em;
+}
+
+.FishWeightChartTooltipCaption {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
