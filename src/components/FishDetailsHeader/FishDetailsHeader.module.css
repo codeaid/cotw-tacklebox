@@ -1,0 +1,41 @@
+.FishDetailsHeader {
+  align-items: center;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.FishDetailsHeaderDescription {
+  order: 2;
+}
+
+.FishDetailsHeaderImage {
+  height: auto;
+  max-width: 100%;
+  order: 1;
+  user-select: none;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+
+.FishDetailsHeaderTitle {
+  color: var(--color-primary);
+  margin: 0 0 1rem 0;
+  padding: 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .FishDetailsHeader {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .FishDetailsHeaderDescription {
+    order: 1;
+  }
+
+  .FishDetailsHeaderImage {
+    order: 2;
+  }
+}
