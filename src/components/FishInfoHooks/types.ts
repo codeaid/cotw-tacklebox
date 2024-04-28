@@ -1,5 +1,5 @@
-import type { FishId } from 'types/fishes';
+import type { HookData } from 'types/data';
 
 export interface FishInfoHooksProps {
-  fishId: FishId;
+  data: HookData;
 }

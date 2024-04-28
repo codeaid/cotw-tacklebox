@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { FishData } from 'types/data';
+import type { BaitData, FishData } from 'types/data';
 import type { Fish } from 'types/fishes';
 
 export interface FishInfoDetailsItemProps {
@@ -9,6 +9,7 @@ export interface FishInfoDetailsItemProps {
 
 export interface FishInfoDetailsProps {
   children?: ReactNode;
-  data: FishData;
+  baitData: BaitData;
+  fishData: FishData;
   fish: Fish;
 }
