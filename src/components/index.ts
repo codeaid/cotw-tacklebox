@@ -1,4 +1,5 @@
 export * from './Container';
+export * from './FishGrid';
 export * from './FishInfo';
 export * from './FishInfoBaits';
 export * from './FishInfoDetails';

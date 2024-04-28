@@ -1,0 +1,38 @@
+.FishGridItem {
+  align-items: center;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+}
+
+.FishGridItemImage {
+  filter: var(--dropshadow-medium);
+  height: 150px;
+  margin-top: -0.5em;
+  transition: transform 100ms ease-in-out;
+  width: 150px;
+}
+
+.FishGridItemLabel {
+  background-color: var(--color-bg-dark);
+  color: var(--font-color);
+  font-size: 0.9em;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  position: absolute;
+  bottom: 0.125rem;
+  left: 0.125rem;
+  padding: 0.5em;
+  right: 0.125rem;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.FishGridItemLabelLegendary {
+  color: var(--color-primary);
+}
