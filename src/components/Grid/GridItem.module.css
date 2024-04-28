@@ -1,0 +1,45 @@
+@keyframes GridItemBorderGlow {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.GridItem {
+  aspect-ratio: 1/1;
+  background: var(--color-grid-item-inner);
+  background: radial-gradient(
+      circle,
+      var(--color-grid-item-inner) 0%,
+      var(--color-grid-item-outer) 100%);
+  display: flex;
+  filter: var(--dropshadow-default);
+  flex-direction: column;
+  position: relative;
+}
+
+.GridItem::after {
+  border: 0.125rem solid var(--color-border-dark);
+  border-radius: 0.15rem;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.GridItem:hover {
+  background: radial-gradient(
+      circle,
+      var(--color-grid-item-active-outer) 0%,
+      var(--color-grid-item-active-inner) 100%);
+}
+
+.GridItem:hover::after {
+  animation: GridItemBorderGlow normal 1s infinite ease-in-out;
+  border-color: var(--color-primary);
+}
+
+.GridItem:hover {
+  filter: var(--dropshadow-medium);
+}
