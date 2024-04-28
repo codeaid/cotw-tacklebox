@@ -2,6 +2,7 @@
 
 import clsx from 'clsx';
 import { type InputHTMLAttributes, useState } from 'react';
+import { sourceSansPro } from 'fonts';
 import styles from './Input.module.css';
 
 export const Input = (props: InputHTMLAttributes<HTMLInputElement>) => {
@@ -28,7 +29,7 @@ export const Input = (props: InputHTMLAttributes<HTMLInputElement>) => {
     >
       <input
         {...rest}
-        className={clsx(styles.Input, className)}
+        className={clsx(sourceSansPro.className, styles.Input, className)}
         onBlur={handleBlur}
         onFocus={handleFocus}
       />
