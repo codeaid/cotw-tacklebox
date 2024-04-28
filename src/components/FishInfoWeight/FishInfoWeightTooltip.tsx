@@ -1,8 +1,8 @@
 import type { ComputedBoxPlotSummary } from '@nivo/boxplot';
 import { WeightLabel } from 'components';
-import styles from './FishWeightChartTooltip.module.css';
+import styles from './FishInfoWeightTooltip.module.css';
 
-export const FishWeightChartTooltip = (props: ComputedBoxPlotSummary) => {
+export const FishInfoWeightTooltip = (props: ComputedBoxPlotSummary) => {
   const {
     data: {
       extrema: [min, max],
@@ -11,8 +11,8 @@ export const FishWeightChartTooltip = (props: ComputedBoxPlotSummary) => {
   } = props;
 
   return (
-    <div className={styles.FishWeightChartTooltip}>
-      <div className={styles.FishWeightChartTooltipCaption}>{group}</div>
+    <div className={styles.FishInfoWeightTooltip}>
+      <div className={styles.FishInfoWeightTooltipCaption}>{group}</div>
       <WeightLabel kg={min} /> - <WeightLabel kg={max} />
     </div>
   );

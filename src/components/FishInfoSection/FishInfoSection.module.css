@@ -1,8 +1,8 @@
-.FishDetailsSection:not(:first-of-type) {
+.FishInfoSection:not(:first-of-type) {
   margin-top: 3.5rem;
 }
 
-.FishDetailsSectionHeading {
+.FishInfoSectionHeading {
   border-bottom: thin solid var(--color-border-dark);
   color: var(--color-primary);
   font-size: 1.8rem;

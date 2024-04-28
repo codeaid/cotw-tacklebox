@@ -5,19 +5,19 @@ import { BoxPlot } from '@nivo/boxplot';
 import type { FunctionComponent } from 'react';
 import { useMemo } from 'react';
 import useResizeObserver from 'use-resize-observer';
-import { createSvgDefs, createSvgFills } from './FishWeightChart.defs';
+import { createSvgDefs, createSvgFills } from './FishInfoWeight.defs';
 import {
   createChartData,
   formatWeightLabel,
   getMaximumValue,
   getMinimumValue,
-} from './FishWeightChart.helpers';
-import { theme } from './FishWeightChart.theme';
-import { FishWeightChartTooltip } from './FishWeightChartTooltip';
-import type { FishWeightChartProps } from './types';
-import styles from './FishWeightChart.module.css';
+} from './FishInfoWeight.helpers';
+import { theme } from './FishInfoWeight.theme';
+import { FishInfoWeightTooltip } from './FishInfoWeightTooltip';
+import type { FishInfoWeightProps } from './types';
+import styles from './FishInfoWeight.module.css';
 
-export const FishWeightChart = (props: FishWeightChartProps) => {
+export const FishInfoWeight = (props: FishInfoWeightProps) => {
   const { data, ranks = ['j', 'b', 's', 'g', 'd'] } = props;
 
   // Determine dimensions of the wrapper element
@@ -47,7 +47,7 @@ export const FishWeightChart = (props: FishWeightChartProps) => {
   );
 
   return (
-    <div className={styles.FishWeightChart} ref={ref}>
+    <div className={styles.FishInfoWeight} ref={ref}>
       <BoxPlot
         animate={false}
         axisBottom={{
@@ -86,7 +86,7 @@ export const FishWeightChart = (props: FishWeightChartProps) => {
           ...theme,
           translation: {},
         }}
-        tooltip={FishWeightChartTooltip as FunctionComponent<BoxPlotTooltipProps>}
+        tooltip={FishInfoWeightTooltip as FunctionComponent<BoxPlotTooltipProps>}
         valueScale={{
           type: 'linear',
           min: minValue,

@@ -1,5 +1,5 @@
 import type { FishId } from 'types/fishes';
 
-export interface HookSizeGridProps {
+export interface FishInfoHooksProps {
   fishId: FishId;
 }

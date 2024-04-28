@@ -1,5 +1,5 @@
 import type { Fish } from 'types/fishes';
 
-export interface FishDetailsHeaderProps {
+export interface FishInfoHeaderProps {
   fish: Fish;
 }
