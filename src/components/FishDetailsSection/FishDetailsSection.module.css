@@ -1,10 +1,11 @@
-.FishDetailsSection {
-  margin-top: 2em;
+.FishDetailsSection:not(:first-of-type) {
+  margin-top: 3.5rem;
 }
 
 .FishDetailsSectionHeading {
   border-bottom: thin solid var(--color-border-dark);
   color: var(--color-primary);
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   padding: 0 0 0.25em 0;
 }

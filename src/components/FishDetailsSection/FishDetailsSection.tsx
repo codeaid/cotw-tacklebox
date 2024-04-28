@@ -6,7 +6,7 @@ export const FishDetailsSection = (props: FishDetailsSectionProps) => {
 
   return (
     <section className={styles.FishDetailsSection}>
-      <h3 className={styles.FishDetailsSectionHeading}>{title}</h3>
+      <h2 className={styles.FishDetailsSectionHeading}>{title}</h2>
       {children}
     </section>
   );
