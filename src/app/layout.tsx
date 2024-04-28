@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { PropsWithChildren } from 'react';
+import { Container } from 'components';
 import { sourceSansPro } from 'fonts';
 import styles from './layout.module.css';
 import 'normalize.css';
@@ -20,7 +21,9 @@ const RootLayout = (props: PropsWithChildren) => (
   <html className={sourceSansPro.className} lang="en">
     <body>
       <div className={styles.Layout}>
-        <main className={styles.LayoutContent}>{props.children}</main>
+        <main className={styles.LayoutContent}>
+          <Container>{props.children}</Container>
+        </main>
       </div>
     </body>
   </html>
