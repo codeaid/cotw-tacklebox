@@ -6,6 +6,7 @@ export * from './FishInfoHeader';
 export * from './FishInfoHooks';
 export * from './FishInfoSection';
 export * from './FishInfoWeight';
+export * from './Footer';
 export * from './Separator';
 export * from './TraitIcon';
 export * from './TraitIconList';

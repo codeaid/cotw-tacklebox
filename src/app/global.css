@@ -79,6 +79,18 @@ body::after {
   z-index: -100;
 }
 
+a.link,
+a.link:active,
+a.link:link,
+a.link:visited {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+a.link:hover {
+  color: var(--color-primary);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-bold);
   line-height: 1.2em;
