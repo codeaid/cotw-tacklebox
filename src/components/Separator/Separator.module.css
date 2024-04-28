@@ -1,0 +1,45 @@
+.Separator {
+  background: var(--color-border-medium);
+  border: none;
+  cursor: default;
+  display: block;
+  height: 1px;
+  margin: 0;
+  max-width: 100%;
+}
+
+.SeparatorHighlightCenter {
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-border) 50%,
+      transparent 100%);
+}
+
+.SeparatorHighlightLeft {
+  background: linear-gradient(
+      90deg,
+      var(--color-border) 0%,
+      transparent 100%);
+}
+
+.SeparatorHighlightRight {
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-border) 100%);
+}
+
+.SeparatorSpacingBoth {
+  margin: 1em;
+}
+
+.SeparatorSpacingHorizontal {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.SeparatorSpacingVertical {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
