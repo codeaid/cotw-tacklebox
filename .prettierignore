@@ -1,1 +1,9 @@
-package.json
+next.config.js
+*.css
+*.gif
+*.jpg
+*.ico
+*.json
+*.png
+*.svg
+*.woff2
