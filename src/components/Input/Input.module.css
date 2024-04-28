@@ -1,0 +1,41 @@
+@keyframes InputFocusBorder {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.Input {
+  background-color: transparent;
+  border: none;
+  color: var(--font-color);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--font-letter-spacing);
+  min-width: 30rem;
+  outline: none;
+  padding: 1em;
+  z-index: 2;
+}
+
+.InputWrapper {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.InputWrapper::after {
+  border: 0.125rem solid var(--color-border-medium);
+  border-radius: 0.1rem;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.InputWrapperFocused::after {
+  animation: InputFocusBorder normal 1s infinite ease-in-out;
+  border-color: var(--color-primary);
+}
