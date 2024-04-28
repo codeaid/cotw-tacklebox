@@ -8,12 +8,12 @@
   background-color: transparent;
   border: none;
   color: var(--font-color);
+  display: block;
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--font-letter-spacing);
-  min-width: 30rem;
   outline: none;
   padding: 1em;
-  z-index: 2;
+  width: 100%;
 }
 
 .InputWrapper {
@@ -21,6 +21,7 @@
   max-width: 100%;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .InputWrapper::after {
