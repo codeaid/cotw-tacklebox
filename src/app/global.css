@@ -1,0 +1,158 @@
+:root {
+  --color-bg-dark: rgb(10, 17, 35);
+  --color-bg-light: rgba(32, 37, 61, 1);
+
+  --color-border: rgba(120, 140, 165, 1);
+  --color-border-medium: rgba(120, 140, 165, 0.5);
+  --color-border-dark: rgba(120, 140, 165, 0.25);
+
+  --color-grid-item-active-inner: rgba(57, 70, 90, 0.8);
+  --color-grid-item-active-outer: rgba(137, 152, 187, 0.6);
+  --color-grid-item-inner: rgba(79, 117, 166, 0.4);
+  --color-grid-item-outer: rgba(32, 37, 61, 0.6);
+
+  --color-primary: rgb(255, 200, 5);
+  --color-rank-juvenile: rgb(70, 75, 90);
+  --color-rank-juvenile-dark: rgb(65, 70, 85);
+  --color-rank-bronze: rgb(190, 140, 100);
+  --color-rank-bronze-dark: rgb(140, 105, 85);
+  --color-rank-silver: rgb(110, 135, 140);
+  --color-rank-silver-dark: rgb(85, 100, 110);
+  --color-rank-gold: rgb(200, 160, 30);
+  --color-rank-gold-dark: rgb(145, 120, 40);
+  --color-rank-diamond: rgb(10, 90, 170);
+  --color-rank-diamond-dark: rgb(15, 70, 135);
+  --color-rank-legendary: rgb(145, 10, 200);
+  --color-rank-legendary-dark: rgb(110, 15, 150);
+
+  --color-scrollbar-bg: var(--color-bg-dark);
+  --color-scrollbar-thumb: var(--color-border-medium);
+  --color-scrollbar-thumb-active: var(--color-primary);
+  --color-scrollbar-track: var(--color-border-medium);
+
+  --dropshadow-default: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.4));
+  --dropshadow-medium: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.4));
+  --dropshadow-large: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.4));
+
+  --font-color: rgb(255, 255, 255);
+  --font-color-muted: rgba(120, 140, 160, 1);
+  --font-letter-spacing: 0.04em;
+  --font-line-height: 1.6;
+  --font-size-default: 18px;
+  --font-size-mobile: 16px;
+  --font-weight-bold: 500;
+  --font-weight-regular: 300;
+  --font-weight-semibold: 400;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-default);
+  height: 100vh;
+}
+
+body {
+  background: var(--color-bg-dark);
+  color: var(--font-color);
+  cursor: default;
+  font-weight: var(--font-weight-regular);
+  height: 100vh;
+  letter-spacing: var(--font-letter-spacing);
+  line-height: var(--font-line-height);
+}
+
+body::after {
+  background: var(--color-bg-dark);
+  background: radial-gradient(
+      circle,
+      var(--color-bg-light) 0%,
+      var(--color-bg-dark) 80%);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2em;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+p:not(:first-child) {
+  margin-top: 1rem;
+}
+
+*::selection {
+  background-color: var(--color-bg-dark);
+  color: var(--color-primary);
+}
+
+*::-webkit-scrollbar {
+  background-color: var(--color-scrollbar-bg);
+  width: 0.4rem;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-track {
+  background-color: var(--color-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: var(--color-scrollbar-thumb);
+  border-color: transparent;
+  border-radius: 0.2rem;
+  width: 0.4rem;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-scrollbar-thumb-active);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: var(--font-size-mobile);
+  }
+}

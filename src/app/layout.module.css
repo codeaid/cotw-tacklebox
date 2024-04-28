@@ -1,0 +1,17 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.LayoutContent {
+  flex: 1;
+  overflow: auto;
+  padding: 2rem 2rem 4rem;
+}
+
+@media (max-width: 768px) {
+  .LayoutContent {
+    padding: 1rem 1rem 3rem;
+  }
+}
