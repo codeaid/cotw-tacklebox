@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { PropsWithChildren } from 'react';
-import { Container } from 'components';
+import { Container, Footer, Header } from 'components';
 import { sourceSansPro } from 'fonts';
 import styles from './layout.module.css';
 import 'normalize.css';
@@ -21,9 +21,22 @@ const RootLayout = (props: PropsWithChildren) => (
   <html className={sourceSansPro.className} lang="en">
     <body>
       <div className={styles.Layout}>
+        <Header
+          links={[
+            { href: '/', label: 'Home' },
+            {
+              href: '/fishes',
+              label: 'Fishes',
+              match: '^\\/fishes',
+            },
+          ]}
+        />
+
         <main className={styles.LayoutContent}>
           <Container>{props.children}</Container>
         </main>
+
+        <Footer />
       </div>
     </body>
   </html>
