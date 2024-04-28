@@ -4,4 +4,5 @@ export * from './FishInfoHooks';
 export * from './FishInfoSection';
 export * from './FishInfoWeight';
 export * from './TraitIcon';
+export * from './TraitIconList';
 export * from './WeightLabel';

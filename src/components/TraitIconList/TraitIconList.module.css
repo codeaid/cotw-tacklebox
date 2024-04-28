@@ -1,0 +1,7 @@
+.TraitIconList {
+  display: flex;
+}
+
+.TraitIconListIcon:not(:first-child) {
+  margin-left: 0.5em;
+}
