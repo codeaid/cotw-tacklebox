@@ -4,9 +4,17 @@ import type { ReserveFishGridProps } from './types';
 import styles from './ReserveFishGrid.module.css';
 
 export const ReserveFishGrid = (props: ReserveFishGridProps) => {
-  const { reserve } = props;
+  const { query, reserve } = props;
 
-  const reserveFishes = fishes.filter(fish => fish.reserves.includes(reserve.id));
+  // Filter fish that inhabit the current reserve and optionally filter them by a search query
+  const reserveFishes = fishes
+    .filter(fish => fish.reserves.includes(reserve.id))
+    .filter(fish => (query ? fish.name.toLowerCase().includes(query.toLowerCase()) : true));
+
+  // Do not render the grid if there are no fish available
+  if (!reserveFishes.length) {
+    return null;
+  }
 
   return (
     <div className={styles.ReserveFishGrid}>
