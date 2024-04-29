@@ -2,11 +2,14 @@
 const nextConfig = {
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  images: {
+    unoptimized: true
+  },
   output: 'export',
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: false,
-  webpack(config, { dev }) {
+  webpack(config) {
     // Enable importing SVG images as components
     config.module.rules.push({
       test: /\.svg$/,
