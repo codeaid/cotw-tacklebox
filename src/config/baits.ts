@@ -1,4 +1,4 @@
-import { sortBaits } from 'lib/sort';
+import { sortByName } from 'lib/sort';
 import type {
   Bait,
   BaitId,
@@ -22,7 +22,7 @@ export const baitsBottom = (
     { id: 'pellets-regular', name: 'Pellets - Regular' },
     { id: 'wafters-white', name: 'Wafters - White' },
   ] as Bait<BaitIdBottom>[]
-).sort(sortBaits);
+).sort(sortByName);
 
 export const baitsLive = (
   [
@@ -31,7 +31,7 @@ export const baitsLive = (
     { id: 'minnow', name: 'Minnow' },
     { id: 'redworm', name: 'Redworm' },
   ] as Bait<BaitIdLive>[]
-).sort(sortBaits);
+).sort(sortByName);
 
 export const baitsNatural = (
   [
@@ -44,7 +44,7 @@ export const baitsNatural = (
     { id: 'liver', name: 'Liver' },
     { id: 'marshmallow', name: 'Marshmallow' },
   ] as Bait<BaitIdNatural>[]
-).sort(sortBaits);
+).sort(sortByName);
 
 export const baitKinds: BaitKind[] = [
   { id: 'natural', name: 'Natural' },
@@ -67,7 +67,7 @@ export const lures = (
     { id: 'tube', name: 'Tube' },
     { id: 'worm', name: 'Worm' },
   ] as Lure[]
-).sort(sortBaits);
+).sort(sortByName);
 
 export const lureMethods: LureMethod[] = [
   { id: 'c', name: 'Constant' },

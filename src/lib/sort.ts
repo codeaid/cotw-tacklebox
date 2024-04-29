@@ -1,13 +1,13 @@
-import type { Bait, Lure } from 'types/baits';
 import type { Fish } from 'types/fishes';
 
 /**
- * Sort a list of baits by their name
+ * Sort a list of entries by their name
  *
  * @param a Left parameter
  * @param b Right parameter
  */
-export const sortBaits = (a: Bait | Lure, b: Bait | Lure) => a.name.localeCompare(b.name);
+export const sortByName = (a: { name: string }, b: { name: string }) =>
+  a.name.localeCompare(b.name);
 
 /**
  * Sort a list of fishes ensuring legendary fish are at the end of the list and all remaining fish
