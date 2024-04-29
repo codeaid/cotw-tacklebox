@@ -10,6 +10,7 @@
 }
 
 .FishInfoHeaderImage {
+  filter: var(--dropshadow-large);
   height: auto;
   max-width: 100%;
   order: 1;
