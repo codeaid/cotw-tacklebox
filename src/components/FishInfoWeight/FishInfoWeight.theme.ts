@@ -14,7 +14,7 @@ export const theme: Theme = {
   },
   grid: {
     line: {
-      stroke: 'var(--color-border-muted)',
+      stroke: 'var(--color-border-dark)',
     },
   },
   text: {
