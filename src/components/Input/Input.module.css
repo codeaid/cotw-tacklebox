@@ -12,16 +12,21 @@
   font-weight: var(--font-weight-semibold);
   letter-spacing: var(--font-letter-spacing);
   outline: none;
-  padding: 1em;
+  padding: 0.75em;
   width: 100%;
+}
+
+.Input::selection {
+  color: var(--font-color);
+  background-color: var(--color-border-medium);
 }
 
 .InputWrapper {
   display: inline-block;
   max-width: 100%;
-  overflow: hidden;
   position: relative;
   width: 100%;
+  z-index: 0;
 }
 
 .InputWrapper::after {
