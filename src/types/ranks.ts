@@ -1,4 +1,6 @@
-export type RankId = 'j' | 'b' | 's' | 'g' | 'd' | 'l';
+export const rankIds = ['j', 'b', 's', 'g', 'd', 'l'] as const;
+
+export type RankId = (typeof rankIds)[number];
 
 export interface Rank {
   id: RankId;

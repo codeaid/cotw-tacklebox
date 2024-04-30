@@ -1,4 +1,6 @@
-export type ReserveId = 'es' | 'no' | 'sa' | 'us';
+export const reserveIds = ['us', 'no', 'es', 'sa'] as const;
+
+export type ReserveId = (typeof reserveIds)[number];
 
 export interface Reserve {
   id: ReserveId;
