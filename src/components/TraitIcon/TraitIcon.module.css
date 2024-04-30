@@ -1,8 +1,43 @@
 .TraitIcon {
+  position: relative;
+}
+
+.TraitIconImage {
   transition: filter 100ms ease-in-out, transform 100ms ease-in-out;
 }
 
-.TraitIcon:hover {
+.TraitIconImage:hover {
   filter: var(--dropshadow-default);
   transform: scale(1.08);
+}
+
+.TraitIconLabel {
+  background-color: var(--color-bg-dark);
+  border: thin solid var(--color-border-dark);
+  border-radius: 0.25em;
+  filter: var(--dropshadow-medium);
+  font-size: 0.75em;
+  left: 50%;
+  line-height: 1.4;
+  opacity: 0;
+  padding: 0.4em 0.6em;
+  position: absolute;
+  top: 105%;
+  width: 12rem;
+  transform: translateX(-50%);
+  transition: opacity 100ms ease-in-out;
+}
+
+.TraitIconName {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.2em;
+}
+
+.TraitIconDescription {
+  color: var(--font-color);
+}
+
+.TraitIconImage:hover + .TraitIconLabel {
+  opacity: 1;
 }

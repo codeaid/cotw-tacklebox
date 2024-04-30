@@ -14,13 +14,19 @@ export const TraitIcon = (props: TraitIconProps) => {
   }
 
   return (
-    <Image
-      alt={trait.name}
-      className={clsx(styles.TraitIcon, className)}
-      height={size}
-      src={trait.image}
-      title={`${trait.name}: ${trait.description}`}
-      width={size}
-    />
+    <div className={clsx(styles.TraitIcon, className)}>
+      <Image
+        alt={trait.name}
+        className={styles.TraitIconImage}
+        height={size}
+        src={trait.image}
+        width={size}
+      />
+
+      <div className={styles.TraitIconLabel}>
+        <div className={styles.TraitIconName}>{trait.name}</div>
+        <div className={styles.TraitIconDescription}>{trait.description}</div>
+      </div>
+    </div>
   );
 };
