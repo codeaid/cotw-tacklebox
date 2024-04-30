@@ -1,5 +1,8 @@
 .Header {
   background-color: var(--color-bg-dark);
+  display: flex;
+  flex-direction: column;
+  height: 3.8rem;
   position: relative;
 }
 
@@ -15,12 +18,12 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
 }
 
 .HeaderLinkList {
   align-items: center;
   display: flex;
+  flex: 1;
   justify-content: center;
   list-style-type: none;
   margin: 0;
@@ -34,7 +37,7 @@
   font-weight: var(--font-weight-bold);
   line-height: 1em;
   margin: 0;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .HeaderLink {
