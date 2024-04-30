@@ -1,6 +1,7 @@
 import assetsTraits from 'assets/traits';
 import type { Trait, TraitId } from 'types/traits';
 
+// prettier-ignore
 const data: Omit<Trait, 'image'>[] = [
   {
     id: 'aggressive',
@@ -8,9 +9,29 @@ const data: Omit<Trait, 'image'>[] = [
     description: 'Goes directly for a strike without nibbling',
   },
   {
+    id: 'ambusher',
+    name: 'Ambusher',
+    description: 'Bites only lures which have recently splashed in the water',
+  },
+  {
     id: 'bottom-lurker',
     name: 'Bottom Lurker',
     description: 'Prefers swimming closer to the bottom',
+  },
+  {
+    id: 'daredevil',
+    name: 'Daredevil',
+    description: 'Loves hanging around waterfalls and high-speed streams',
+  },
+  {
+    id: 'deep-speech',
+    name: 'Deep Speech',
+    description: 'At night, La Monstrenca rises to the surface to swim around and emits a deep, gurgling noise',
+  },
+  {
+    id: 'eagle-eyed',
+    name: 'Eagle Eyed',
+    description: 'Alejandro Magno will not become interested in or bite any lures or bait, until a lure has been twitched in the water',
   },
   {
     id: 'easily-spooked',
@@ -43,9 +64,29 @@ const data: Omit<Trait, 'image'>[] = [
     description: 'More active at night',
   },
   {
+    id: 'patient-scavenger',
+    name: 'Patient Scavenger',
+    description: 'Bites only baits left soaking in water for a while',
+  },
+  {
+    id: 'rising-sun',
+    name: 'Rising Sun',
+    description: 'Will rise to the surface during daytime, but hides as soon as it spots tackle',
+  },
+  {
+    id: 'social-distancing',
+    name: 'Social Distancing',
+    description: 'Will keep to a safe distance unless engaged in a fight',
+  },
+  {
     id: 'sun-lover',
     name: 'Sun Lover',
     description: 'More active after the sun rises',
+  },
+  {
+    id: 'superiority-complex',
+    name: 'Superiority Complex',
+    description: 'Will bite eagerly and willingly, knowing it will emerge victorious',
   },
 ];
 
