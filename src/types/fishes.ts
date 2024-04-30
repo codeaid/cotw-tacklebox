@@ -1,3 +1,4 @@
+import type { BaitData, FishData, HookData } from 'types/data';
 import type { ReserveId } from 'types/reserves';
 
 export const fishIdsGeneric = [
@@ -111,3 +112,9 @@ export type Fish<
   };
   reserves: ReserveId[];
 };
+
+export type FishEntity<TFishKey extends FishId = FishId> = Fish<TFishKey> &
+  FishData & {
+    baitData: BaitData;
+    hookData: HookData;
+  };
