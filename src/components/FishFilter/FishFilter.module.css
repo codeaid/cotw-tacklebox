@@ -1,0 +1,132 @@
+.FishFilter {
+  background-color: var(--color-bg-light);
+  border-left: thin solid var(--color-border-dark);
+  display: flex;
+  filter: var(--dropshadow-medium);
+  flex-direction: column;
+  height: 100%;
+  max-width: 20rem;
+  overflow: hidden;
+  user-select: none;
+  z-index: 10;
+}
+
+.FishFilterActions {
+  background-color: var(--color-bg-dark-lighter);
+  border-top: thin solid var(--color-border-dark);
+  padding: 0.5em;
+}
+
+.FishFilterAction {
+  width: 100%;
+}
+
+.FishFilterContent {
+  background: linear-gradient(
+      0deg,
+      var(--color-bg-dark) 0%,
+      var(--color-bg-dark-transparent) 50%,
+      var(--color-bg-dark) 100%);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.FishFilterHeading {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.FishFilterHeadingIcon {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.FishFilterHeadingIcon:hover {
+  fill: var(--color-primary);
+}
+
+.FishFilterOptions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.25em;
+}
+
+.FishFilterOptionsWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+.FishFilterOption {
+  background-color: var(--color-bg-dark);
+  border: thin solid var(--color-border-dark);
+  border-radius: 0.25em;
+  color: var(--font-color-muted);
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: var(--font-weight-semibold);
+  margin: 0.2em;
+  min-width: 3em;
+  padding: 0.25em 0.5em;
+  text-align: center;
+}
+
+.FishFilterOption:hover {
+  border-color: var(--color-border);
+}
+
+.FishFilterOptionSelected {
+  background-color: var(--color-bg-light);
+  border-color: var(--color-border);
+  color: var(--color-primary);
+}
+
+.FishFilterOptionHeading {
+  border-bottom: thin solid var(--color-border-dark);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  margin: 1em 0 0.5em;
+}
+
+.FishesPageFilterButton {
+  align-items: center;
+  background-color: var(--color-bg-light);
+  border: none;
+  border-radius: 0.5rem;
+  bottom: 2rem;
+  color: var(--font-color);
+  cursor: pointer;
+  display: flex;
+  filter: var(--dropshadow-default);
+  justify-content: center;
+  padding: 0.75em 1em;
+  position: absolute;
+  right: 2rem;
+  transition: filter 50ms ease-in-out;
+}
+
+.FishesPageFilterButton:hover {
+  filter: var(--dropshadow-medium);
+}
+
+.FishesPageFilterButtonIcon {
+  fill: var(--font-color);
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+
+.FishesPageFilterButtonIconActive {
+  fill: var(--color-primary);
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.7));
+}

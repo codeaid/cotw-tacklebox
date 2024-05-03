@@ -1,5 +1,6 @@
 export * from './Button';
 export * from './Container';
+export * from './FishFilter';
 export * from './FishGrid';
 export * from './FishInfo';
 export * from './FishInfoBaits';
