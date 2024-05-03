@@ -13,6 +13,7 @@ export * from './Grid';
 export * from './Header';
 export * from './Input';
 export * from './Layout';
+export * from './NavigationRail';
 export * from './ReserveFishGrid';
 export * from './SearchInput';
 export * from './Separator';

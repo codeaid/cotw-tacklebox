@@ -1,0 +1,57 @@
+.NavigationRail {
+  align-items: center;
+  background: var(--color-bg-dark);
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding: 1rem 0;
+  width: 4rem;
+}
+
+.NavigationRailMenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavigationRailMenuItem {
+  margin: 0;
+  padding: 0;
+  transition: transform 100ms ease-in-out;
+}
+
+.NavigationRailMenuItem + .NavigationRailMenuItem {
+  margin-top: 1em;
+}
+
+.NavigationRailMenuItemIcon {
+  fill: var(--font-color);
+  font-size: 1.6em;
+}
+
+.NavigationRailMenuItem:hover .NavigationRailMenuItemIcon {
+  transform: scale(1.1);
+}
+
+.NavigationRailMenuItemActive .NavigationRailMenuItemIcon {
+  fill: var(--color-primary);
+  filter: var(--dropshadow-medium);
+}
+
+.NavigationRailMenuItemLink {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.NavigationRailMenuItemLabel {
+  color: var(--font-color);
+  font-size: 0.75em;
+  margin-top: 0.1em;
+  text-align: center;
+}
+
+.NavigationRailMenuItemActive .NavigationRailMenuItemLabel {
+  color: var(--color-primary);
+}
