@@ -1,5 +1,5 @@
-import type { Fish } from 'types/fishes';
+import type { FishEntity } from 'types/fishes';
 
 export interface FishGridProps {
-  fishes: Fish[];
+  entities: FishEntity[];
 }

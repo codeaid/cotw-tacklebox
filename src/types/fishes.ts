@@ -113,8 +113,9 @@ export type Fish<
   reserves: ReserveId[];
 };
 
-export type FishEntity<TFishKey extends FishId = FishId> = Fish<TFishKey> &
+export type FishEntity<TFishKey extends FishId = FishId> = Omit<Fish<TFishKey>, 'reserves'> &
   FishData & {
     baitData: BaitData;
     hookData: HookData;
+    reserve: ReserveId;
   };

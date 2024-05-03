@@ -1,6 +1,7 @@
+import type { FishEntity } from 'types/fishes';
 import type { Reserve } from 'types/reserves';
 
 export interface ReserveFishGridProps {
-  query?: string;
+  entities: FishEntity[];
   reserve: Reserve;
 }

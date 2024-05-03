@@ -11,7 +11,7 @@ export const fishEntities = fishes
       ...fishData[fish.id],
       baitData: baitData[fish.id],
       hookData: hookData[fish.id],
-      reserves: [reserve],
+      reserve,
     })),
   )
   .flat();

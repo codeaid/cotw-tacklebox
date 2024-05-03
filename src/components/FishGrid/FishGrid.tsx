@@ -6,27 +6,29 @@ import type { FishGridProps } from './types';
 import styles from './FishGrid.module.css';
 
 export const FishGrid = (props: FishGridProps) => {
-  const { fishes } = props;
+  const { entities } = props;
 
   return (
     <Grid>
-      {fishes.map(fish => (
-        <Link href={`/fishes/${fish.id}`} key={fish.id}>
+      {entities.map(entity => (
+        <Link href={`/fishes/${entity.id}`} key={entity.id}>
           <GridItem className={styles.FishGridItem}>
             <Image
-              alt={fish.name}
+              alt={entity.name}
               className={styles.FishGridItemImage}
               height={150}
-              src={fish.image.small}
+              priority={true}
+              src={entity.image.small}
+              unoptimized={true}
               width={150}
             />
             <div
               className={clsx(styles.FishGridItemLabel, {
-                [styles.FishGridItemLabelLegendary]: fish.legendary,
+                [styles.FishGridItemLabelLegendary]: entity.legendary,
               })}
-              title={fish.name}
+              title={entity.name}
             >
-              {fish.name}
+              {entity.name}
             </div>
           </GridItem>
         </Link>
