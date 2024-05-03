@@ -16,6 +16,7 @@ export const FishInfoHeader = (props: FishInfoHeaderProps) => {
           alt={fish.name}
           className={styles.FishInfoHeaderImage}
           height={540}
+          priority={true}
           src={fish.image.large}
           width={960}
         />
