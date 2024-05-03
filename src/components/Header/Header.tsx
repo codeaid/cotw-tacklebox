@@ -1,39 +1,17 @@
-'use client';
-
-import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Separator } from 'components';
-import type { HeaderProps } from './types';
+import { SearchInput } from 'components';
+import logoImg from 'assets/misc/logo.png';
 import styles from './Header.module.css';
 
-export const Header = (props: HeaderProps) => {
-  const { links } = props;
+export const Header = () => (
+  <div className={styles.Header}>
+    <Link className={styles.HeaderLogo} href="/fishes">
+      <Image alt="Tackle Box logo" height={40} src={logoImg.src} width={184} />
+    </Link>
 
-  const pathname = usePathname();
-
-  return (
-    <div className={styles.Header}>
-      <div className={styles.HeaderHighlight}></div>
-
-      <ul className={styles.HeaderLinkList}>
-        {links.map((link, index) => (
-          <li className={styles.HeaderLinkItem} key={index}>
-            <Link
-              className={clsx(styles.HeaderLink, {
-                [styles.HeaderLinkActive]: link.match
-                  ? new RegExp(link.match).test(pathname)
-                  : pathname === link.href,
-              })}
-              href={link.href}
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      <Separator highlight="center" />
+    <div className={styles.HeaderSearch}>
+      <SearchInput />
     </div>
-  );
-};
+  </div>
+);

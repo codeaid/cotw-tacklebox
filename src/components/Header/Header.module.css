@@ -1,53 +1,31 @@
 .Header {
-  background-color: var(--color-bg-dark);
-  display: flex;
-  flex-direction: column;
-  height: 3.8rem;
-  position: relative;
-}
-
-.HeaderHighlight {
-  background-image: url("./assets/background.png");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.HeaderLinkList {
   align-items: center;
+  background: var(--color-bg-dark);
+  display: grid;
+  filter: var(--dropshadow-default);
+  grid-template-columns: 200px 1fr 200px;
+  padding: 0 1em;
+  z-index: 15;
+}
+
+.HeaderLogo {
+  line-height: 1;
+  overflow: hidden;
+}
+
+.HeaderSearch {
   display: flex;
-  flex: 1;
   justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: inherit;
-  z-index: 2;
+  padding: 0 2rem;
 }
 
-.HeaderLinkItem {
-  font-size: 1.5rem;
-  font-weight: var(--font-weight-bold);
-  line-height: 1em;
-  margin: 0;
-  padding: 0 1rem;
-}
+@media (max-width: 839px) {
+  .Header {
+    grid-template-columns: 0 1fr 0;
+    padding: 0;
+  }
 
-.HeaderLink {
-  color: var(--font-color-muted);
-  line-height: inherit;
-  text-decoration: none;
-  transition: color 100ms ease-in-out;
-}
-
-.HeaderLinkActive,
-.HeaderLink:hover {
-  color: var(--font-color);
+  .HeaderSearch {
+    padding: 0;
+  }
 }
