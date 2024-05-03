@@ -1,0 +1,23 @@
+.Layout {
+  background: var(--color-bg-dark);
+  background: radial-gradient(
+      circle at 50% 40%,
+      var(--color-bg-light) 0%,
+      var(--color-bg-dark-lighter) 70%);
+  background-position: top center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.LayoutChildren {
+  flex: 1;
+  padding: 2ex 2rem 4rem;
+}
+
+@media (max-width: 768px) {
+  .LayoutChildren {
+    padding: 1rem 1rem 3rem;
+  }
+}
