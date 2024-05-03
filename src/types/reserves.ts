@@ -5,5 +5,6 @@ export type ReserveId = (typeof reserveIds)[number];
 export interface Reserve {
   id: ReserveId;
   name: string;
+  shortName: string;
   description: string;
 }
