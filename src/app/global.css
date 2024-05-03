@@ -1,10 +1,14 @@
 :root {
-  --color-bg-dark: rgb(10, 17, 35);
+  --color-bg-dark: rgba(10, 17, 35, 1);
+  --color-bg-dark-transparent: rgba(10, 17, 35, 0.5);
+  --color-bg-dark-lighter: rgba(15, 20, 40, 1);
   --color-bg-light: rgba(32, 37, 61, 1);
+  --color-bg-light-darker: rgba(28, 33, 56, 1);
 
   --color-border: rgba(120, 140, 165, 1);
   --color-border-medium: rgba(120, 140, 165, 0.5);
   --color-border-dark: rgba(120, 140, 165, 0.25);
+  --color-border-dark-transparent: rgba(120, 140, 165, 0.1);
 
   --color-grid-item-active-inner: rgba(57, 70, 90, 0.8);
   --color-grid-item-active-outer: rgba(137, 152, 187, 0.6);
@@ -26,9 +30,9 @@
   --color-rank-legendary-dark: rgb(110, 15, 150);
 
   --color-scrollbar-bg: var(--color-bg-dark);
-  --color-scrollbar-thumb: var(--color-border);
+  --color-scrollbar-thumb: var(--color-border-dark);
   --color-scrollbar-thumb-active: var(--color-primary);
-  --color-scrollbar-track: var(--color-border-medium);
+  --color-scrollbar-track: transparent;
 
   --dropshadow-default: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.4));
   --dropshadow-medium: drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.4));
@@ -52,31 +56,6 @@
 html {
   font-size: var(--font-size-default);
   height: 100vh;
-}
-
-body {
-  background: var(--color-bg-dark);
-  color: var(--font-color);
-  cursor: default;
-  font-weight: var(--font-weight-regular);
-  height: 100vh;
-  letter-spacing: var(--font-letter-spacing);
-  line-height: var(--font-line-height);
-}
-
-body::after {
-  background: var(--color-bg-dark);
-  background: radial-gradient(
-      circle,
-      var(--color-bg-light) 0%,
-      var(--color-bg-dark) 80%);
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: -100;
 }
 
 a.link,

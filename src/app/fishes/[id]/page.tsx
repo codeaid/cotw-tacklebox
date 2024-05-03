@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { FishInfo } from 'components';
+import { Container, FishInfo } from 'components';
 import { fishes } from 'config/fishes';
 import { fishIdsGeneric, fishIdsLegendary } from 'types/fishes';
 
@@ -18,7 +18,11 @@ const FishDetailsPage = (props: { params: { id: string } }) => {
     return notFound();
   }
 
-  return <FishInfo fish={fish} />;
+  return (
+    <Container>
+      <FishInfo fish={fish} />
+    </Container>
+  );
 };
 
 export default FishDetailsPage;

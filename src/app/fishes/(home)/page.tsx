@@ -1,31 +1,47 @@
 'use client';
 
-import { type ChangeEvent, useCallback, useState } from 'react';
-import { Input, ReserveFishGrid } from 'components';
+import { useCallback, useMemo, useState } from 'react';
+import { FishFilter, ReserveFishGrid } from 'components';
 import { reserves } from 'config/reserves';
+import type { FishEntity } from 'types/fishes';
 import styles from './page.module.css';
 
 const FishesPage = () => {
-  // Initialise the search query to the current value of the "q" query parameter
-  const [query, setQuery] = useState('');
+  // List of currently displayed entities (will be populated after the filter mounts)
+  const [fishEntities, setFishEntities] = useState<FishEntity[]>([]);
+
+  // Flag indicating whether filtered entities have been populated by the fish filter
+  const [loaded, setLoaded] = useState(false);
 
   /**
-   * Update internally stored query value on each input change
+   * Handle changing any of the filter options
+   *
+   * @param entities List of fish entities that should be displayed
    */
-  const handleInputChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => setQuery(event.target.value.trim()),
-    [],
-  );
+  const handleFilterChange = useCallback((entities: FishEntity[]) => {
+    setFishEntities(entities);
+    setLoaded(true);
+  }, []);
+
+  // Render results depending on the state of filters
+  const results = useMemo(() => {
+    if (!loaded) {
+      return <div className={styles.FishesPageNoResults}>Loading fish data</div>;
+    }
+
+    if (!fishEntities.length) {
+      return <div className={styles.FishesPageNoResults}>No results found</div>;
+    }
+
+    return reserves.map(reserve => (
+      <ReserveFishGrid entities={fishEntities} key={reserve.id} reserve={reserve} />
+    ));
+  }, [fishEntities, loaded]);
 
   return (
     <>
-      <div className={styles.FishesPageSearchInput}>
-        <Input defaultValue={query} name="q" placeholder="Search..." onChange={handleInputChange} />
-      </div>
-
-      {reserves.map(reserve => (
-        <ReserveFishGrid key={reserve.id} query={query} reserve={reserve} />
-      ))}
+      {results}
+      <FishFilter onChange={handleFilterChange} />
     </>
   );
 };

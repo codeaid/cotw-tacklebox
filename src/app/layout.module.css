@@ -1,17 +1,19 @@
-.Layout {
+.LayoutBody {
+  background: var(--color-bg-dark);
+  color: var(--font-color);
+  cursor: default;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  font-weight: var(--font-weight-regular);
+  height: 100vh;
+  letter-spacing: var(--font-letter-spacing);
+  line-height: var(--font-line-height);
+  overflow: hidden;
 }
 
-.LayoutContent {
+.LayoutBodyContent {
+  display: flex;
   flex: 1;
-  overflow: auto;
-  padding: 2rem 2rem 4rem;
-}
-
-@media (max-width: 768px) {
-  .LayoutContent {
-    padding: 1rem 1rem 3rem;
-  }
+  overflow: hidden;
+  position: relative;
 }

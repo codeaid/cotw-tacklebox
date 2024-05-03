@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import type { PropsWithChildren } from 'react';
-import { Container, Footer, Header } from 'components';
+import { type PropsWithChildren } from 'react';
+import { Header, Layout, NavigationRail } from 'components';
 import { sourceSansPro } from 'fonts';
 import styles from './layout.module.css';
 import 'normalize.css';
@@ -19,24 +19,12 @@ export const viewport: Viewport = {
 
 const RootLayout = (props: PropsWithChildren) => (
   <html className={sourceSansPro.className} lang="en">
-    <body>
-      <div className={styles.Layout}>
-        <Header
-          links={[
-            { href: '/', label: 'Home' },
-            {
-              href: '/fishes',
-              label: 'Fishes',
-              match: '^\\/fishes',
-            },
-          ]}
-        />
+    <body className={styles.LayoutBody}>
+      <Header />
 
-        <main className={styles.LayoutContent}>
-          <Container>{props.children}</Container>
-        </main>
-
-        <Footer />
+      <div className={styles.LayoutBodyContent} id="body-content">
+        <NavigationRail />
+        <Layout>{props.children}</Layout>
       </div>
     </body>
   </html>
