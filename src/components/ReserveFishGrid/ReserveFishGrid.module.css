@@ -1,4 +1,4 @@
-.ReserveFishGrid {
+.ReserveFishGrid:not(:first-child) {
   margin-top: 2rem;
 }
 
@@ -15,4 +15,11 @@
   margin: 0;
   padding: 0.5em;
   text-align: center;
+}
+
+.ReserveFishGridTitleCount {
+  color: var(--font-color-muted);
+  font-size: 0.75em;
+  font-weight: var(--font-weight-regular);
+  margin-left: 0.5em;
 }
