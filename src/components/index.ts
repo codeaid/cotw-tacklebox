@@ -13,6 +13,7 @@ export * from './Header';
 export * from './Input';
 export * from './Layout';
 export * from './ReserveFishGrid';
+export * from './SearchInput';
 export * from './Separator';
 export * from './TraitIcon';
 export * from './TraitIconList';

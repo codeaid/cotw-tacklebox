@@ -1,0 +1,42 @@
+.SearchInputOption {
+  align-items: center;
+  border-bottom: thin solid var(--color-border-dark-transparent);
+  color: var(--font-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.2;
+  padding: 0.9em;
+  text-decoration: none;
+}
+
+.SearchInputOption:hover,
+.SearchInputOptionActive {
+  background-color: var(--color-bg-dark);
+}
+
+.SearchInputOptionLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.SearchInputOptionLabelLegendary {
+  color: var(--color-primary);
+}
+
+.SearchInputOptionReserve {
+  color: var(--font-color-muted);
+  direction: rtl;
+  font-size: 0.9em;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 839px) {
+  .SearchInputOption {
+    padding: 1.4em;
+  }
+}

@@ -1,4 +1,5 @@
-import type { Fish } from 'types/fishes';
+import { reserves } from 'config/reserves';
+import type { Fish, FishEntity } from 'types/fishes';
 
 /**
  * Sort a list of entries by their name
@@ -16,7 +17,27 @@ export const sortByName = (a: { name: string }, b: { name: string }) =>
  * @param a Left parameter
  * @param b Right parameter
  */
-export const sortFishes = (a: Fish, b: Fish) =>
+export const sortFishes = (
+  a: Pick<Fish, 'legendary' | 'name'>,
+  b: Pick<Fish, 'legendary' | 'name'>,
+) =>
   a.legendary !== b.legendary
     ? Number(a.legendary) - Number(b.legendary)
     : a.name.localeCompare(b.name);
+
+/**
+ * Sort a list of fish entities to be displayed in search results
+ *
+ * @param a Left parameter
+ * @param b Right parameter
+ */
+export const sortSearchResults = (a: FishEntity, b: FishEntity) => {
+  const result = sortByName(a, b);
+  if (result !== 0) {
+    return result;
+  }
+
+  const reserveOrderMap = reserves.map(reserve => reserve.id);
+
+  return reserveOrderMap.indexOf(a.reserve) - reserveOrderMap.indexOf(b.reserve);
+};

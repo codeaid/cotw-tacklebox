@@ -1,0 +1,110 @@
+.SearchInput {
+  max-width: 40rem;
+  padding: 0.5em 1em;
+  position: relative;
+  transition: padding 150ms ease-in-out;
+  user-select: none;
+  width: 100%;
+}
+
+.SearchInputWrapper {
+  align-items: center;
+  background-color: var(--color-bg-light-darker);
+  border: thin solid var(--color-border-dark);
+  border-radius: 3em;
+  display: flex;
+  margin: 0 auto;
+  transition: border-color 150ms ease-in-out, border-radius 150ms ease-in-out;
+}
+
+.SearchInputFocused .SearchInputWrapper {
+  border-color: var(--color-primary);
+}
+
+.SearchInputElement {
+  background-color: transparent;
+  border: none;
+  color: var(--font-color);
+  flex: 1;
+  font-family: inherit;
+  line-height: 1.4;
+  margin-left: 1.5em;
+  outline: none;
+  padding: 0.5em 1em;
+  transition: padding 150ms ease-in-out;
+  width: 100%;
+}
+
+.SearchInputIconClose {
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 1.25rem;
+  transform: scale(1.4);
+}
+
+.SearchInputIconClose:hover {
+  fill: var(--color-primary);
+}
+
+.SearchInputIconSearch {
+  left: 2rem;
+  position: absolute;
+  top: 1.25rem;
+}
+
+.SearchInputResults {
+  background-color: var(--color-bg-light-darker);
+  border-radius: 0.25em;
+  filter: var(--dropshadow-medium);
+  left: 0;
+  max-height: 18rem;
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 110%;
+  transition: opacity 150ms ease-in-out;
+  width: 100%;
+}
+
+.SearchInputResultsEnter {
+  opacity: 0;
+}
+
+.SearchInputResultsEnterActive,
+.SearchInputResultsEnterDone,
+.SearchInputResultsExit {
+  opacity: 1;
+}
+
+.SearchInputResultsExitActive {
+  opacity: 0;
+}
+
+@media (max-width: 839px) {
+  .SearchInput {
+    max-width: unset;
+  }
+
+  .SearchInputExpanded {
+    padding: 0;
+  }
+
+  .SearchInputExpanded .SearchInputWrapper {
+    border-color: transparent;
+    border-radius: 0;
+  }
+
+  .SearchInputExpanded .SearchInputElement {
+    margin-right: 1.5em;
+    padding: 1em 2em;
+  }
+
+  .SearchInputResults {
+    bottom: 0;
+    filter: unset;
+    max-height: unset;
+    top: 0;
+  }
+}
