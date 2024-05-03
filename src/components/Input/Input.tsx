@@ -23,13 +23,17 @@ export const Input = (props: InputHTMLAttributes<HTMLInputElement>) => {
 
   return (
     <div
-      className={clsx(styles.InputWrapper, {
-        [styles.InputWrapperFocused]: focused,
-      })}
+      className={clsx(
+        styles.InputWrapper,
+        {
+          [styles.InputWrapperFocused]: focused,
+        },
+        className,
+      )}
     >
       <input
         {...rest}
-        className={clsx(sourceSansPro.className, styles.Input, className)}
+        className={clsx(sourceSansPro.className, styles.Input)}
         onBlur={handleBlur}
         onFocus={handleFocus}
       />
