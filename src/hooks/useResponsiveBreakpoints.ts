@@ -33,9 +33,13 @@ export const useResponsiveBreakpoints = () => {
     return {
       isCompactView: false,
       isMediumView: false,
+      isMediumViewLT: false,
       isExpandedView: false,
+      isExpandedViewLT: false,
       isLargeView: false,
+      isLargeViewLT: false,
       isExtraLargeView: false,
+      isExtraLargeViewLT: false,
     };
   }
 
@@ -48,8 +52,13 @@ export const useResponsiveBreakpoints = () => {
   return {
     isCompactView,
     isMediumView,
+    isMediumViewLT: isMediumView || isCompactView,
     isExpandedView,
+    isExpandedViewLT: isExpandedView || isMediumView || isCompactView,
     isLargeView,
+    isLargeViewLT: isLargeView || isExpandedView || isMediumView || isCompactView,
     isExtraLargeView,
+    isExtraLargeViewLT:
+      isExpandedView || isLargeView || isExpandedView || isMediumView || isCompactView,
   };
 };
