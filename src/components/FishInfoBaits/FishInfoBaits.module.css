@@ -150,7 +150,7 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .FishInfoBaitsCategoryWrapperBaits {
     grid-template-columns: 1fr 1fr;
   }
@@ -172,7 +172,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .FishInfoBaitsCategoryWrapperBaits {
     grid-template-columns: 1fr;
   }

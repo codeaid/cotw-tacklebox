@@ -84,15 +84,16 @@
   background-color: var(--color-bg-light-darker);
   border-radius: 0.25em;
   filter: var(--dropshadow-medium);
-  left: 0;
+  left: 1rem;
   max-height: 18rem;
   opacity: 0;
   overflow: hidden;
   overflow-y: auto;
   position: absolute;
+  right: 1rem;
   top: 100%;
   transition: opacity 150ms ease-in-out;
-  width: 100%;
+  z-index: 10;
 }
 
 .SearchInputResultsEnter {
@@ -109,11 +110,13 @@
   opacity: 0;
 }
 
-@media (max-width: 839px) {
+@media (max-width: 1023px) {
   .SearchInput {
     max-width: unset;
   }
+}
 
+@media (max-width: 767px) {
   .SearchInputExpanded {
     padding: 0;
   }
@@ -135,7 +138,9 @@
   .SearchInputResults {
     bottom: 0;
     filter: unset;
+    left: 0;
     max-height: unset;
+    right: 0;
     top: 0;
   }
 }

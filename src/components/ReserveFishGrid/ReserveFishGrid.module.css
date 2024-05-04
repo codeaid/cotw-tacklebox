@@ -1,4 +1,4 @@
-.ReserveFishGrid:not(:first-child) {
+.ReserveFishGrid + .ReserveFishGrid {
   margin-top: 2rem;
 }
 
@@ -22,4 +22,10 @@
   font-size: 0.75em;
   font-weight: var(--font-weight-regular);
   margin-left: 0.5em;
+}
+
+@media (max-width: 1023px) {
+  .ReserveFishGrid:first-child .ReserveFishGridTitle {
+    padding-top: 0;
+  }
 }

@@ -130,7 +130,7 @@ p:not(:first-child) {
   background-color: var(--color-scrollbar-thumb-active);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   html {
     font-size: var(--font-size-mobile);
   }

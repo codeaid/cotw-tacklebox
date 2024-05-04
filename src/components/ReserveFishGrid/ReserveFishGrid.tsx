@@ -16,10 +16,10 @@ export const ReserveFishGrid = (props: ReserveFishGridProps) => {
   return (
     <div className={styles.ReserveFishGrid}>
       <div className={styles.ReserveFishGridHeader}>
-        <h2 className={styles.ReserveFishGridTitle}>
+        <h1 className={styles.ReserveFishGridTitle}>
           {reserve.name}
           <span className={styles.ReserveFishGridTitleCount}>({reserveFishes.length})</span>
-        </h2>
+        </h1>
         <Separator highlight="center" />
       </div>
 

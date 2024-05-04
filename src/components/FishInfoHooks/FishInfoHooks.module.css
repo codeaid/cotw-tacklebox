@@ -62,19 +62,19 @@
   color: var(--font-color);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .FishInfoHooks {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .FishInfoHooks {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 575px) {
   .FishInfoHooks {
     grid-template-columns: repeat(4, 1fr);
   }

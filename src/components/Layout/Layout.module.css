@@ -13,10 +13,10 @@
 
 .LayoutChildren {
   flex: 1;
-  padding: 2ex 2rem 4rem;
+  padding: 2rem 2rem 4rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .LayoutChildren {
     padding: 1rem 1rem 3rem;
   }

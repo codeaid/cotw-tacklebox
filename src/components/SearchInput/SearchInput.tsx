@@ -164,7 +164,10 @@ export const SearchInput = () => {
 
     // Return results as-is and display them under the input
     return output;
-  }, [activeResultIndex, handleResultSelect, isCompactView, isMediumView, results]);
+  }, [activeResultIndex, handleResultSelect, isMediumViewLT, results]);
+
+  // Close search results and reset the state when switching between desktop and mobile views
+  useEffect(() => setExpanded(false), [isMediumViewLT]);
 
   // Reset component state when search results are removed
   useEffect(() => {

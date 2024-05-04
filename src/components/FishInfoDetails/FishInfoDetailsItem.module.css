@@ -14,14 +14,14 @@
   margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .FishInfoDetailsItem {
     grid-gap: 0;
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .FishInfoDetailsItem {
     grid-gap: 0;
     grid-template-columns: 1fr;
