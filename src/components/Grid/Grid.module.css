@@ -3,3 +3,15 @@
   grid-gap: 0.8rem;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
+
+@media (max-width: 767px) {
+  .Grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .Grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+}
