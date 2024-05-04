@@ -216,24 +216,24 @@ export const SearchInput = () => {
           onFocus={handleInputFocus}
           onKeyDown={handleInputKeyDown}
         />
-
-        <CSSTransition
-          classNames={{
-            enter: styles.SearchInputResultsHidden,
-            enterActive: styles.SearchInputResultsEnterActive,
-            enterDone: styles.SearchInputResultsEnterDone,
-            exit: styles.SearchInputResultsExit,
-            exitActive: styles.SearchInputResultsHidden,
-          }}
-          in={expanded}
-          mountOnEnter={true}
-          nodeRef={resultsRef}
-          timeout={150}
-          unmountOnExit={true}
-        >
-          {searchResults}
-        </CSSTransition>
       </div>
+
+      <CSSTransition
+        classNames={{
+          enter: styles.SearchInputResultsEnter,
+          enterActive: styles.SearchInputResultsEnterActive,
+          enterDone: styles.SearchInputResultsEnterDone,
+          exit: styles.SearchInputResultsExit,
+          exitActive: styles.SearchInputResultsExitActive,
+        }}
+        in={expanded}
+        mountOnEnter={true}
+        nodeRef={resultsRef}
+        timeout={150}
+        unmountOnExit={true}
+      >
+        {searchResults}
+      </CSSTransition>
     </div>
   );
 };

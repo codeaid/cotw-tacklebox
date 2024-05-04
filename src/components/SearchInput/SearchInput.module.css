@@ -1,3 +1,9 @@
+@keyframes SearchInputFocusBorder {
+  50% {
+    opacity: 0.35;
+  }
+}
+
 .SearchInput {
   max-width: 40rem;
   padding: 0.5em 1em;
@@ -10,11 +16,29 @@
 .SearchInputWrapper {
   align-items: center;
   background-color: var(--color-bg-light-darker);
-  border: thin solid var(--color-border-dark);
-  border-radius: 3em;
+  border-radius: 5em;
   display: flex;
   margin: 0 auto;
+  position: relative;
+  transition: border-radius 150ms ease-in-out;
+}
+
+.SearchInputWrapper::after {
+  border: 0.125rem solid var(--color-border-medium);
+  border-radius: 5em;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   transition: border-color 150ms ease-in-out, border-radius 150ms ease-in-out;
+  z-index: 0;
+}
+
+.SearchInputFocused .SearchInputWrapper::after {
+  animation: SearchInputFocusBorder normal 1s infinite ease-in-out;
+  border-color: var(--color-primary);
 }
 
 .SearchInputFocused .SearchInputWrapper {
@@ -33,6 +57,7 @@
   padding: 0.5em 1em;
   transition: padding 150ms ease-in-out;
   width: 100%;
+  z-index: 1;
 }
 
 .SearchInputIconClose {
@@ -41,6 +66,7 @@
   right: 2rem;
   top: 1.25rem;
   transform: scale(1.4);
+  z-index: 2;
 }
 
 .SearchInputIconClose:hover {
@@ -51,6 +77,7 @@
   left: 2rem;
   position: absolute;
   top: 1.25rem;
+  z-index: 2;
 }
 
 .SearchInputResults {
@@ -63,7 +90,7 @@
   overflow: hidden;
   overflow-y: auto;
   position: absolute;
-  top: 110%;
+  top: 100%;
   transition: opacity 150ms ease-in-out;
   width: 100%;
 }
@@ -92,6 +119,10 @@
   }
 
   .SearchInputExpanded .SearchInputWrapper {
+    border-radius: 0;
+  }
+
+  .SearchInputExpanded .SearchInputWrapper::after {
     border-color: transparent;
     border-radius: 0;
   }
