@@ -1,4 +1,4 @@
-.LayoutBody {
+.Body {
   background: var(--color-bg-dark);
   color: var(--font-color);
   cursor: default;
@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.LayoutBodyContent {
+.Page {
   display: flex;
   flex: 1;
   overflow: hidden;

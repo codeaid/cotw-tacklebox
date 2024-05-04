@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { pageElementId } from 'config/dom';
 import { fishEntities } from 'config/entities';
 import {
   filterByBait,
@@ -86,16 +87,16 @@ export const FishFilter = (props: FishFilterProps) => {
     return <FishFilterButton active={filtersApplied} onClick={handleFilterOpen} />;
   }
 
-  // Retrieve the body content element to mount the filter panel to
-  const parentNode = document.getElementById('body-content');
-  if (!parentNode) {
+  // Retrieve the page element to mount the filter panel to
+  const pageElement = document.getElementById(pageElementId);
+  if (!pageElement) {
     return null;
   }
 
   return (
     <FishFilterPanel
       filtersApplied={filtersApplied}
-      parentNode={parentNode}
+      parentNode={pageElement}
       searchQuery={searchQuery}
       selectedBaits={selectedBaits}
       selectedHabitats={selectedHabitats}

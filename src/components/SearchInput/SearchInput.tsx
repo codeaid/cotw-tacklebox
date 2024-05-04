@@ -7,6 +7,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { IoCloseSharp, IoSearch } from 'react-icons/io5';
 import { CSSTransition } from 'react-transition-group';
+import { pageElementId } from 'config/dom';
 import { fishEntities } from 'config/entities';
 import { useResponsiveBreakpoints } from 'hooks';
 import { filterByQuery } from 'lib/filter';
@@ -20,7 +21,7 @@ export const SearchInput = () => {
   const router = useRouter();
 
   // Detect mobile and tablet screens
-  const { isCompactView, isMediumView } = useResponsiveBreakpoints();
+  const { isMediumViewLT } = useResponsiveBreakpoints();
 
   // Current search value
   const [query, setQuery] = useState('');
@@ -153,11 +154,12 @@ export const SearchInput = () => {
     );
 
     // Render search results inside the layout to enable showing them in full-screen view
-    if (isCompactView || isMediumView) {
-      const layout = document.getElementById('layout');
+    if (isMediumViewLT) {
+      const pageElement = document.getElementById(pageElementId);
+      console.info({ pageElement });
 
-      if (layout) {
-        const portal = createPortal(output, layout, 'search-results');
+      if (pageElement) {
+        const portal = createPortal(output, pageElement);
         return <>{portal}</>;
       }
     }
