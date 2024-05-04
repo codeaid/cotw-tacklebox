@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { pageElementId } from 'config/dom';
 import { fishEntities } from 'config/entities';
+import { useResponsiveBreakpoints } from 'hooks';
 import {
   filterByBait,
   filterByHabitat,
@@ -24,6 +25,9 @@ import type { FishFilterProps } from './types';
 
 export const FishFilter = (props: FishFilterProps) => {
   const { onChange } = props;
+
+  // Detect when the application is running in mobile views
+  const { isCompactView } = useResponsiveBreakpoints();
 
   // Flag indicating whether the filter panel is currently visible or not
   const [filterVisible, setFilterVisible] = useState(false);
@@ -88,7 +92,7 @@ export const FishFilter = (props: FishFilterProps) => {
   }
 
   // Retrieve the page element to mount the filter panel to
-  const pageElement = document.getElementById(pageElementId);
+  const pageElement = isCompactView ? document.body : document.getElementById(pageElementId);
   if (!pageElement) {
     return null;
   }
