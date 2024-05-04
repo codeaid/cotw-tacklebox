@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useCallback } from 'react';
 import type { FishFilterOptionsProps } from './types';
-import styles from './FishFilter.module.css';
+import styles from 'components/FishFilter/FishFilterPanel.module.css';
 
 export const FishFilterOptions = <TOption extends string>(
   props: FishFilterOptionsProps<TOption>,
@@ -27,12 +27,12 @@ export const FishFilterOptions = <TOption extends string>(
 
   return (
     <>
-      <div className={styles.FishFilterOptionHeading}>{label}</div>
-      <div className={styles.FishFilterOptions}>
+      <div className={styles.FishFilterPanelOptionHeading}>{label}</div>
+      <div className={styles.FishFilterPanelOptions}>
         {options.map(option => (
           <div
-            className={clsx(styles.FishFilterOption, {
-              [styles.FishFilterOptionSelected]: selection.includes(option),
+            className={clsx(styles.FishFilterPanelOption, {
+              [styles.FishFilterPanelOptionSelected]: selection.includes(option),
             })}
             key={option}
             onClick={() => handleChange(option)}

@@ -1,4 +1,4 @@
-.FishFilter {
+.FishFilterPanel {
   background-color: var(--color-bg-light);
   border-left: thin solid var(--color-border-dark);
   display: flex;
@@ -11,17 +11,17 @@
   z-index: 10;
 }
 
-.FishFilterActions {
+.FishFilterPanelActions {
   background-color: var(--color-bg-dark-lighter);
   border-top: thin solid var(--color-border-dark);
   padding: 0.5em;
 }
 
-.FishFilterAction {
+.FishFilterPanelAction {
   width: 100%;
 }
 
-.FishFilterContent {
+.FishFilterPanelContent {
   background: linear-gradient(
       0deg,
       var(--color-bg-dark) 0%,
@@ -33,7 +33,7 @@
   overflow: hidden;
 }
 
-.FishFilterHeading {
+.FishFilterPanelHeading {
   align-items: center;
   display: flex;
   font-size: 1.2rem;
@@ -45,22 +45,22 @@
   text-transform: uppercase;
 }
 
-.FishFilterHeadingIcon {
+.FishFilterPanelHeadingIcon {
   cursor: pointer;
   font-size: 1.2em;
 }
 
-.FishFilterHeadingIcon:hover {
+.FishFilterPanelHeadingIcon:hover {
   fill: var(--color-primary);
 }
 
-.FishFilterOptions {
+.FishFilterPanelOptions {
   display: flex;
   flex-wrap: wrap;
   margin: -0.25em;
 }
 
-.FishFilterOptionsWrapper {
+.FishFilterPanelOptionsWrapper {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -68,7 +68,7 @@
   padding: 1rem;
 }
 
-.FishFilterOption {
+.FishFilterPanelOption {
   background-color: var(--color-bg-dark);
   border: thin solid var(--color-border-dark);
   border-radius: 0.25em;
@@ -82,51 +82,19 @@
   text-align: center;
 }
 
-.FishFilterOption:hover {
+.FishFilterPanelOption:hover {
   border-color: var(--color-border);
 }
 
-.FishFilterOptionSelected {
+.FishFilterPanelOptionSelected {
   background-color: var(--color-bg-light);
   border-color: var(--color-border);
   color: var(--color-primary);
 }
 
-.FishFilterOptionHeading {
+.FishFilterPanelOptionHeading {
   border-bottom: thin solid var(--color-border-dark);
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
   margin: 1em 0 0.5em;
-}
-
-.FishesPageFilterButton {
-  align-items: center;
-  background-color: var(--color-bg-light);
-  border: none;
-  border-radius: 0.5rem;
-  bottom: 2rem;
-  color: var(--font-color);
-  cursor: pointer;
-  display: flex;
-  filter: var(--dropshadow-default);
-  justify-content: center;
-  padding: 0.75em 1em;
-  position: absolute;
-  right: 2rem;
-  transition: filter 50ms ease-in-out;
-}
-
-.FishesPageFilterButton:hover {
-  filter: var(--dropshadow-medium);
-}
-
-.FishesPageFilterButtonIcon {
-  fill: var(--font-color);
-  font-size: 1.2em;
-  margin-right: 0.5em;
-}
-
-.FishesPageFilterButtonIconActive {
-  fill: var(--color-primary);
-  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.7));
 }

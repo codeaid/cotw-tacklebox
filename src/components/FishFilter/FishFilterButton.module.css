@@ -1,0 +1,36 @@
+.FishFilterButton {
+  align-items: center;
+  background-color: var(--color-bg-light);
+  border: none;
+  border-radius: 0.5rem;
+  bottom: 2rem;
+  color: var(--font-color);
+  cursor: pointer;
+  display: flex;
+  filter: var(--dropshadow-default);
+  justify-content: center;
+  padding: 0.75em;
+  position: absolute;
+  right: 2rem;
+  transition: filter 50ms ease-in-out;
+}
+
+.FishFilterButton:hover {
+  filter: var(--dropshadow-medium);
+}
+
+.FishFilterButtonIcon {
+  fill: var(--font-color);
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+
+.FishFilterButtonActive .FishFilterButtonIcon {
+  fill: var(--color-primary);
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.7));
+}
+
+.FishFilterButtonActive .FishFilterButtonLabel {
+  color: var(--color-primary);
+  filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.7));
+}
