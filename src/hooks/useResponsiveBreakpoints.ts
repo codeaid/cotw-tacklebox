@@ -4,23 +4,23 @@ import useResizeObserver from 'use-resize-observer';
  * Window sizes used in media queries
  * (from https://m3.material.io/foundations/layout/applying-layout/window-size-classes)
  *
- * - Compact: width < 600
+ * - Compact: width < 576
  *   - Phone in portrait
  *
- * - Medium: 600 ≤ width < 840
+ * - Medium: 576 ≤ width < 768
  *   - Tablet in portrait
  *   - Foldable in portrait (unfolded)
  *
- * - Expanded: 840 ≤ width < 1200
+ * - Expanded: 768 ≤ width < 992
  *   - Phone in landscape
  *   - Tablet in landscape
  *   - Foldable in landscape (unfolded)
  *   - Desktop
  *
- * - Large: 1200 ≤ width < 1600
+ * - Large: 992 ≤ width < 1200
  *   - Desktop
  *
- * - Extra large: 1600 ≤ width
+ * - Extra large: 1200 ≤ width
  *   - Desktop
  *   - Ultra-wide
  */
@@ -39,11 +39,17 @@ export const useResponsiveBreakpoints = () => {
     };
   }
 
+  const isCompactView = width < 576;
+  const isMediumView = width >= 576 && width < 768;
+  const isExpandedView = width >= 768 && width < 992;
+  const isLargeView = width >= 992 && width < 1200;
+  const isExtraLargeView = width >= 1200;
+
   return {
-    isCompactView: width < 600,
-    isMediumView: width >= 600 && width < 840,
-    isExpandedView: width >= 840 && width < 1200,
-    isLargeView: width >= 1200 && width < 1600,
-    isExtraLargeView: width >= 1600,
+    isCompactView,
+    isMediumView,
+    isExpandedView,
+    isLargeView,
+    isExtraLargeView,
   };
 };
