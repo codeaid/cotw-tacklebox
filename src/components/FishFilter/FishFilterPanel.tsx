@@ -107,7 +107,7 @@ export const FishFilterPanel = (props: FishFilterPanelProps) => {
             options={reserveIds}
             selection={selectedReserves}
             onChange={onReservesChange}
-            onRender={id => reserveMap[id].name}
+            onRender={id => reserveMap[id].shortName}
           />
 
           <FishFilterOptions<BaitId>
