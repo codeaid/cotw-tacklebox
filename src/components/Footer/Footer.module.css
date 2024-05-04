@@ -20,3 +20,13 @@
   max-width: 800px;
   text-align: center;
 }
+
+.FooterLink {
+  color: var(--font-color);
+  text-decoration: none;
+  transition: color 100ms ease-in-out;
+}
+
+.FooterLink:hover {
+  color: var(--color-primary);
+}
