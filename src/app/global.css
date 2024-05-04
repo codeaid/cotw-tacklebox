@@ -16,6 +16,7 @@
   --color-grid-item-outer: rgba(32, 37, 61, 0.6);
 
   --color-primary: rgb(255, 200, 5);
+  --color-primary-light: rgba(255, 200, 5, 0.5);
   --color-rank-juvenile: rgb(70, 75, 90);
   --color-rank-juvenile-dark: rgb(65, 70, 85);
   --color-rank-bronze: rgb(190, 140, 100);
