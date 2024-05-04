@@ -5,7 +5,7 @@
   flex-direction: column;
   font-size: 1rem;
   padding: 1rem 0;
-  width: 4rem;
+  width: 4.5rem;
 }
 
 .NavigationRailMenu {
@@ -26,7 +26,7 @@
 
 .NavigationRailMenuItemIcon {
   fill: var(--font-color);
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .NavigationRailMenuItem:hover .NavigationRailMenuItemIcon {
@@ -47,7 +47,7 @@
 
 .NavigationRailMenuItemLabel {
   color: var(--font-color);
-  font-size: 0.75em;
+  font-size: 0.8em;
   margin-top: 0.1em;
   text-align: center;
 }

@@ -3,7 +3,7 @@
   background: var(--color-bg-dark);
   display: grid;
   filter: var(--dropshadow-default);
-  grid-template-columns: calc(200px + 4rem) 1fr 200px;
+  grid-template-columns: calc(200px + 4.5rem) 1fr 200px;
   padding: 0 1em;
   z-index: 15;
 }
