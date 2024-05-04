@@ -1,6 +1,12 @@
 .FishesPageNoResults {
-  color: var(--font-color-muted);
+  align-items: center;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
   padding-top: 5rem;
-  text-align: center;
   user-select: none;
+}
+
+.FishesPageNoResultsMessage {
+  margin-top: 0.5em;
 }

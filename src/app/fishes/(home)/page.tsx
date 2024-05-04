@@ -2,6 +2,7 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { FishFilter, ReserveFishGrid } from 'components';
+import { Spinner } from 'components';
 import { reserves } from 'config/reserves';
 import type { FishEntity } from 'types/fishes';
 import styles from './page.module.css';
@@ -26,7 +27,12 @@ const FishesPage = () => {
   // Render results depending on the state of filters
   const results = useMemo(() => {
     if (!loaded) {
-      return <div className={styles.FishesPageNoResults}>Loading fish data</div>;
+      return (
+        <div className={styles.FishesPageNoResults}>
+          <Spinner />
+          <span className={styles.FishesPageNoResultsMessage}>Loading fish data</span>
+        </div>
+      );
     }
 
     if (!fishEntities.length) {

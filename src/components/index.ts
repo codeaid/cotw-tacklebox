@@ -18,6 +18,7 @@ export * from './NavigationRail';
 export * from './ReserveFishGrid';
 export * from './SearchInput';
 export * from './Separator';
+export * from './Spinner';
 export * from './TraitIcon';
 export * from './TraitIconList';
 export * from './WeightLabel';
