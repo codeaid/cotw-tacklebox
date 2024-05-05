@@ -65,7 +65,7 @@ export const SearchInput = () => {
 
       // Hide the list of search results and redirect the user to the fish details page
       setExpanded(false);
-      router.push(createFishPageUrl(current.id));
+      router.push(createFishPageUrl(current));
     },
     [activeResultIndex, results, router],
   );

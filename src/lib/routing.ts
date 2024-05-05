@@ -1,8 +1,8 @@
-import type { FishId } from 'types/fishes';
+import type { Fish, FishEntity } from 'types/fishes';
 
 /**
  * Generate a fish details page URL
  *
- * @param fishId Fish identifier
+ * @param fish Fish object
  */
-export const createFishPageUrl = (fishId: FishId) => `/fishes/${fishId}`;
+export const createFishPageUrl = (fish: Fish | FishEntity) => `/fishes/${fish.id}`;
