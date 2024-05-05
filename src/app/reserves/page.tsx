@@ -1,8 +1,13 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { reserves } from 'config/reserves';
 import { createReservePageUrl } from 'lib/routing';
 import styles from './page.module.css';
+
+export const metadata: Metadata = {
+  title: 'Reserves - TackleBox',
+};
 
 const ReservesPage = () => (
   <div className={styles.ReservesPage}>

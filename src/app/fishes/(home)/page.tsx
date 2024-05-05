@@ -46,6 +46,7 @@ const FishesPage = () => {
 
   return (
     <>
+      <title>Fish - TackleBox</title>
       {results}
       <FishFilter onChange={handleFilterChange} />
     </>

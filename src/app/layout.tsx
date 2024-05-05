@@ -8,8 +8,8 @@ import 'normalize.css';
 import './global.css';
 
 export const metadata: Metadata = {
-  title: 'Tackle Box',
-  description: 'Tackle Box - Call Of The Wild: The Angler',
+  title: 'TackleBox',
+  description: 'TackleBox - Call Of The Wild: The Angler',
 };
 
 export const viewport: Viewport = {
