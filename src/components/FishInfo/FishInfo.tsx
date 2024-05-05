@@ -3,8 +3,8 @@ import {
   FishInfoDetails,
   FishInfoHeader,
   FishInfoHooks,
-  FishInfoSection,
   FishInfoWeight,
+  InfoSection,
 } from 'components';
 import {
   baitData as sourceBaitData,
@@ -24,23 +24,23 @@ export const FishInfo = (props: FishInfoProps) => {
     <>
       <FishInfoHeader fish={fish} />
 
-      <FishInfoSection title="Details">
+      <InfoSection title="Details">
         <FishInfoDetails baitData={baitData} fishData={fishData} fish={fish} />
-      </FishInfoSection>
+      </InfoSection>
 
       {!fish.legendary ? (
-        <FishInfoSection title="Weight">
+        <InfoSection title="Weight">
           <FishInfoWeight data={fishData} />
-        </FishInfoSection>
+        </InfoSection>
       ) : null}
 
-      <FishInfoSection title="Hook Sizes">
+      <InfoSection title="Hook Sizes">
         <FishInfoHooks data={hookData} />
-      </FishInfoSection>
+      </InfoSection>
 
-      <FishInfoSection title="Tackle Preference">
+      <InfoSection title="Tackle Preference">
         <FishInfoBaits data={baitData} />
-      </FishInfoSection>
+      </InfoSection>
     </>
   );
 };

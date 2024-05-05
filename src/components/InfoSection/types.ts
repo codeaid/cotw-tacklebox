@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-export interface FishInfoSectionProps {
+export interface InfoSectionProps {
   children: ReactNode;
   title: string;
 }
