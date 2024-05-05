@@ -7,4 +7,9 @@ export interface Reserve {
   name: string;
   shortName: string;
   description: string;
+  slug: string;
+  image: {
+    bw: string;
+    color: string;
+  };
 }

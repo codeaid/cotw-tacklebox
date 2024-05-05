@@ -1,0 +1,56 @@
+.ReservesPage {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ReservesPageLink {
+  margin: 1rem;
+  max-width: 12rem;
+}
+
+.ReservesPageLogo {
+  height: auto;
+  transition: filter 100ms ease-in-out, transform 100ms ease-in-out;
+  user-select: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ReservesPageLogo:hover {
+  filter: var(--dropshadow-large);
+  transform: scale(1.02);
+}
+
+@media (max-width: 1199px) {
+  .ReservesPageLink {
+    margin: 2rem;
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .ReservesPageLink {
+    max-width: 12rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .ReservesPageLink {
+    max-width: 10rem;
+  }
+}
+
+@media (max-width: 489px) {
+  .ReservesPageLink {
+    margin: 1rem;
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 359px) {
+  .ReservesPageLink {
+    max-width: 60%;
+  }
+}
