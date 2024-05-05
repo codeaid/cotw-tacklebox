@@ -11,6 +11,15 @@
   grid-row-gap: 1em;
 }
 
+.FishInfoDetailsGroupLink {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.FishInfoDetailsGroupLink:hover {
+  border-bottom: dashed thin var(--color-primary);
+}
+
 @media (max-width: 767px) {
   .FishInfoDetails {
     grid-row-gap: 1em;

@@ -1,7 +1,9 @@
+import Link from 'next/link';
 import { TraitIconList, WeightLabel } from 'components';
 import { habitatMap } from 'config/habitats';
 import { reserveMap } from 'config/reserves';
 import { getBaitPreferences } from 'lib/baits';
+import { createReservePageUrl } from 'lib/routing';
 import { FishInfoDetailsItem } from './FishInfoDetailsItem';
 import type { FishInfoDetailsProps } from './types';
 import styles from './FishInfoDetails.module.css';
@@ -16,7 +18,16 @@ export const FishInfoDetails = (props: FishInfoDetailsProps) => {
     <div className={styles.FishInfoDetails}>
       <div className={styles.FishInfoDetailsGroup}>
         <FishInfoDetailsItem caption="Reserves">
-          {reserves.map(reserve => reserve.name).join(', ')}
+          {reserves.map((reserve, index) => [
+            <Link
+              className={styles.FishInfoDetailsGroupLink}
+              href={createReservePageUrl(reserve)}
+              key={reserve.id}
+            >
+              {reserve.name}
+            </Link>,
+            index < reserves.length - 1 ? <>, </> : null,
+          ])}
         </FishInfoDetailsItem>
 
         <FishInfoDetailsItem caption="Habitats">
