@@ -7,8 +7,22 @@ import type { Fish, FishEntity } from 'types/fishes';
  * @param a Left parameter
  * @param b Right parameter
  */
-export const sortByName = (a: { name: string }, b: { name: string }) =>
+export const sortByName = (a: Pick<Fish, 'name'>, b: Pick<Fish, 'name'>) =>
   a.name.localeCompare(b.name);
+
+/**
+ * Sort fish entities by weight in descending order
+ *
+ * @param a Left parameter
+ * @param b Right parameter
+ */
+export const sortByWeight = (a: FishEntity, b: FishEntity) => {
+  if (a.kgMaxDiamond !== b.kgMaxDiamond) {
+    return a.kgMaxDiamond - b.kgMaxDiamond;
+  }
+
+  return sortByName(a, b);
+};
 
 /**
  * Sort a list of fishes ensuring legendary fish are at the end of the list and all remaining fish

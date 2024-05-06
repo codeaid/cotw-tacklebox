@@ -1,5 +1,12 @@
 import type { BaitId, LureId } from 'types/baits';
-import type { FishEntity } from 'types/fishes';
+import {
+  type FishEntity,
+  type FishId,
+  type FishIdGeneric,
+  type FishIdLegendary,
+  fishIdsGeneric,
+  fishIdsLegendary,
+} from 'types/fishes';
 import type { HabitatId } from 'types/habitats';
 import type { HookSize } from 'types/hooks';
 import type { ReserveId } from 'types/reserves';
@@ -85,3 +92,19 @@ export const filterByReserve = (reserveIds: ReserveId[], fish: FishEntity) =>
  */
 export const filterByTrait = (traitIds: TraitId[], fish: FishEntity) =>
   traitIds.length ? traitIds.every(trait => fish.traits.includes(trait)) : true;
+
+/**
+ * Check if the specified fish entity represents a generic fish
+ *
+ * @param entity Target entity to check
+ */
+export const isGenericFishEntity = (entity: FishEntity): entity is FishEntity<FishIdGeneric> =>
+  (fishIdsGeneric as unknown as FishId[]).includes(entity.id);
+
+/**
+ * Check if the specified fish entity represents a legendary fish
+ *
+ * @param entity Target entity to check
+ */
+export const isLegendaryFishEntity = (entity: FishEntity): entity is FishEntity<FishIdLegendary> =>
+  (fishIdsLegendary as unknown as FishId[]).includes(entity.id);

@@ -19,6 +19,7 @@ export * from './Option';
 export * from './ReserveFishGrid';
 export * from './ReserveInfoDetails';
 export * from './ReserveInfoHeader';
+export * from './ReserveInfoHooks';
 export * from './SearchInput';
 export * from './Separator';
 export * from './Spinner';

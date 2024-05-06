@@ -1,0 +1,61 @@
+.ReserveInfoHooks {
+  margin-top: 1rem;
+}
+
+.ReserveInfoHooksRow {
+  align-items: center;
+  border-bottom: thin solid var(--color-border-dark-transparent);
+  display: flex;
+}
+
+.ReserveInfoHooksRowHeader {
+  font-weight: var(--font-weight-regular);
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 10rem;
+}
+
+.ReserveInfoHooksRowHeaderLink {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.ReserveInfoHooksRowHeaderLink:hover {
+  border-bottom: thin dashed var(--font-color);
+}
+
+.ReserveInfoHooksRowHeaderLinkLegendary {
+  color: var(--color-primary);
+}
+
+.ReserveInfoHooksRowHeaderLinkLegendary:hover {
+  border-bottom: thin dashed var(--color-primary);
+}
+
+.ReserveInfoHooksRowValue {
+  flex: 1;
+}
+
+.ReserveInfoHooksRowHeader,
+.ReserveInfoHooksRowValue {
+  padding: 0.125em 0;
+}
+
+@media (max-width: 1023px) {
+  .ReserveInfoHooksRow {
+    border-bottom-color: var(--color-border-dark);
+    flex-direction: column;
+  }
+
+  .ReserveInfoHooksRowHeader {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .ReserveInfoHooksRowHeader,
+  .ReserveInfoHooksRowValue {
+    padding: 0.5em;
+    width: 100%;
+  }
+}
