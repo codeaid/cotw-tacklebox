@@ -1,0 +1,21 @@
+.Option {
+  background-color: var(--color-bg-light-darker);
+  border: thin solid var(--color-border-dark-transparent);
+  border-radius: 0.1rem;
+  display: flex;
+}
+
+.OptionLabel {
+  flex: 1;
+  padding: 0.5em;
+}
+
+@media (max-width: 399px) {
+  .Option {
+    flex-direction: column;
+  }
+
+  .OptionLabel {
+    text-align: center;
+  }
+}

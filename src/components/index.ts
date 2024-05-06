@@ -15,6 +15,7 @@ export * from './InfoSection';
 export * from './Input';
 export * from './Layout';
 export * from './NavigationRail';
+export * from './Option';
 export * from './ReserveFishGrid';
 export * from './ReserveInfoDetails';
 export * from './ReserveInfoHeader';
