@@ -1,0 +1,46 @@
+.ReserveInfoDetails {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -2rem;
+}
+
+.ReserveInfoDetailsItem {
+  align-items: center;
+  display: grid;
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.15rem;
+  grid-template-areas:
+    'icon label'
+    'icon value';
+  grid-template-columns: max-content 1fr;
+  line-height: 1.2;
+  margin: 0 3rem 2rem 0;
+}
+
+.ReserveInfoDetailsItemIcon {
+  align-items: center;
+  display: flex;
+  grid-area: icon;
+}
+
+.ReserveInfoDetailsItemLabel {
+  color: var(--font-color-muted);
+  font-size: 0.9em;
+  font-weight: var(--font-weight-bold);
+  grid-area: label;
+  white-space: nowrap;
+}
+
+.ReserveInfoDetailsItemValue {
+  font-size: 1.4em;
+  font-weight: var(--font-weight-bold);
+  grid-area: value;
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .ReserveInfoDetailsItemLabel,
+  .ReserveInfoDetailsItemValue {
+    white-space: wrap;
+  }
+}

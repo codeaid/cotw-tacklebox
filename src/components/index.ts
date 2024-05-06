@@ -16,6 +16,7 @@ export * from './Input';
 export * from './Layout';
 export * from './NavigationRail';
 export * from './ReserveFishGrid';
+export * from './ReserveInfoDetails';
 export * from './SearchInput';
 export * from './Separator';
 export * from './Spinner';
