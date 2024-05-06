@@ -45,9 +45,9 @@
   --font-line-height: 1.6;
   --font-size-default: 18px;
   --font-size-mobile: 16px;
-  --font-weight-bold: 500;
   --font-weight-regular: 300;
   --font-weight-semibold: 400;
+  --font-weight-bold: 500;
 }
 
 *, ::after, ::before {

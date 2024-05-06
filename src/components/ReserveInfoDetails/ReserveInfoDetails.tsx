@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import { useMemo } from 'react';
-import { getLegendaryFishCount, getReserveFishCount } from 'lib/reserves';
 import type { ReserveInfoDetailsProps } from './types';
 import fishIconImg from 'assets/icons/fish.png';
 import legendaryIconImg from 'assets/icons/fish_legendary.png';
@@ -8,11 +6,7 @@ import waypointIconImg from 'assets/icons/waypoint.png';
 import styles from './ReserveInfoDetails.module.css';
 
 export const ReserveInfoDetails = (props: ReserveInfoDetailsProps) => {
-  const { reserve } = props;
-
-  // Count number of each fish type
-  const legendaryCount = useMemo(() => getLegendaryFishCount(reserve.id), [reserve.id]);
-  const speciesCount = useMemo(() => getReserveFishCount(reserve.id), [reserve.id]);
+  const { genericFishCount, legendaryFishCount, reserve } = props;
 
   return (
     <div className={styles.ReserveInfoDetails}>
@@ -29,7 +23,7 @@ export const ReserveInfoDetails = (props: ReserveInfoDetailsProps) => {
           <Image alt="Species" height={38} src={fishIconImg.src} width={38} />
         </div>
         <div className={styles.ReserveInfoDetailsItemLabel}>Fish Species</div>
-        <div className={styles.ReserveInfoDetailsItemValue}>{speciesCount}</div>
+        <div className={styles.ReserveInfoDetailsItemValue}>{genericFishCount}</div>
       </div>
 
       <div className={styles.ReserveInfoDetailsItem}>
@@ -37,7 +31,7 @@ export const ReserveInfoDetails = (props: ReserveInfoDetailsProps) => {
           <Image alt="Species" height={38} src={legendaryIconImg.src} width={38} />
         </div>
         <div className={styles.ReserveInfoDetailsItemLabel}>Legendary Fish</div>
-        <div className={styles.ReserveInfoDetailsItemValue}>{legendaryCount}</div>
+        <div className={styles.ReserveInfoDetailsItemValue}>{legendaryFishCount}</div>
       </div>
     </div>
   );

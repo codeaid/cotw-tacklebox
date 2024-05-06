@@ -17,6 +17,7 @@ export * from './Layout';
 export * from './NavigationRail';
 export * from './Option';
 export * from './ReserveFishGrid';
+export * from './ReserveInfo';
 export * from './ReserveInfoDetails';
 export * from './ReserveInfoHeader';
 export * from './ReserveInfoHooks';
