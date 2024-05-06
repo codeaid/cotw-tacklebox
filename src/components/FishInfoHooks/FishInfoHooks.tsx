@@ -4,10 +4,14 @@ import type { FishInfoHooksProps } from './types';
 import styles from './FishInfoHooks.module.css';
 
 export const FishInfoHooks = (props: FishInfoHooksProps) => {
-  const { data } = props;
+  const { compact = false, data } = props;
 
   return (
-    <div className={styles.FishInfoHooks}>
+    <div
+      className={clsx(styles.FishInfoHooks, {
+        [styles.FishInfoHooksCompact]: compact,
+      })}
+    >
       {hookSizes.map(size => (
         <div
           className={clsx(styles.FishInfoHooksCell, {

@@ -62,10 +62,48 @@
   color: var(--font-color);
 }
 
+.FishInfoHooksCompact .FishInfoHooksCell {
+  background-color: transparent;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.FishInfoHooksCompact .FishInfoHooksCellBronze {
+  background: var(--color-rank-bronze-dark);
+}
+
+.FishInfoHooksCompact .FishInfoHooksCellSilver {
+  background: var(--color-rank-silver-dark);
+}
+
+.FishInfoHooksCompact .FishInfoHooksCellGold {
+  background: var(--color-rank-gold-dark);
+}
+
+.FishInfoHooksCompact .FishInfoHooksCellDiamond {
+  background: var(--color-rank-diamond-dark);
+}
+
+.FishInfoHooksCompact .FishInfoHooksCellLegendary {
+  background: var(--color-rank-legendary-dark);
+}
+
+.FishInfoHooksCompact .FishInfoHooksCellBronze,
+.FishInfoHooksCompact .FishInfoHooksCellSilver,
+.FishInfoHooksCompact .FishInfoHooksCellGold,
+.FishInfoHooksCompact .FishInfoHooksCellDiamond,
+.FishInfoHooksCompact .FishInfoHooksCellLegendary {
+  opacity: 1;
+}
+
 @media (max-width: 1023px) {
-  .FishInfoHooks {
+  .FishInfoHooks:not(.FishInfoHooksCompact) {
     grid-template-columns: repeat(7, 1fr);
   }
+}
+
+@media (max-width: 991px) {
+
 }
 
 @media (max-width: 767px) {
