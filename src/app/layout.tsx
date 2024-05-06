@@ -9,7 +9,8 @@ import './global.css';
 
 export const metadata: Metadata = {
   title: 'TackleBox',
-  description: 'TackleBox - Call Of The Wild: The Angler',
+  description:
+    'Dive into the depths of fishing with this comprehensive web app, your ultimate guide to fish species and their habitats. Explore the information for your perfect catch!',
 };
 
 export const viewport: Viewport = {
