@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaHome } from 'react-icons/fa';
-import { FaFishFins } from 'react-icons/fa6';
+import { FaFishFins, FaRegMap } from 'react-icons/fa6';
 import styles from './NavigationRail.module.css';
 
 export const NavigationRail = () => {
@@ -31,6 +31,16 @@ export const NavigationRail = () => {
           <Link className={styles.NavigationRailMenuItemLink} href="/fishes">
             <FaFishFins className={styles.NavigationRailMenuItemIcon} />
             <div className={styles.NavigationRailMenuItemLabel}>Fishes</div>
+          </Link>
+        </li>
+        <li
+          className={clsx(styles.NavigationRailMenuItem, {
+            [styles.NavigationRailMenuItemActive]: pathname === '/reserves',
+          })}
+        >
+          <Link className={styles.NavigationRailMenuItemLink} href="/reserves">
+            <FaRegMap className={styles.NavigationRailMenuItemIcon} />
+            <div className={styles.NavigationRailMenuItemLabel}>Reserves</div>
           </Link>
         </li>
       </ul>
