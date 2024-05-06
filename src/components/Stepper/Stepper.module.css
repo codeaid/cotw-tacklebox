@@ -1,0 +1,36 @@
+.Stepper {
+  background-color: var(--color-bg-light);
+  min-width: 12rem;
+  user-select: none;
+}
+
+.StepperControls {
+  background-color: var(--color-bg-dark-transparent);
+  display: flex;
+  transition: background-color 75ms ease-in-out;
+}
+
+.StepperControls:hover {
+  background-color: var(--color-bg-dark);
+}
+
+.StepperButton {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 0.5em;
+  transition: background-color 75ms ease-in-out;
+}
+
+.StepperButton:hover {
+  background-color: var(--color-bg-light);
+}
+
+.StepperButtonValue {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  font-weight: var(--font-weight-semibold);
+  justify-content: center;
+  padding: 0.5em;
+}

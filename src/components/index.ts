@@ -21,6 +21,7 @@ export * from './ReserveInfoHeader';
 export * from './SearchInput';
 export * from './Separator';
 export * from './Spinner';
+export * from './Stepper';
 export * from './TraitIcon';
 export * from './TraitIconList';
 export * from './WeightLabel';
