@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { type PropsWithChildren } from 'react';
 import { Header, Layout, NavigationRail } from 'components';
+import { metadataBase } from 'config/app';
 import { pageElementId } from 'config/dom';
 import { sourceSansPro } from 'fonts';
 import styles from './layout.module.css';
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: 'TackleBox',
   description:
     'Dive into the depths of fishing with this comprehensive web app, your ultimate guide to fish species and their habitats. Explore the information for your perfect catch!',
+  metadataBase,
 };
 
 export const viewport: Viewport = {
