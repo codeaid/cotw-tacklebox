@@ -16,6 +16,7 @@
 
 .FishInfoBaitsRatingBronze {
   background-color: var(--color-rank-bronze);
+  opacity: 0.7;
 }
 
 .FishInfoBaitsRatingSilver {

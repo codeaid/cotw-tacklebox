@@ -9,6 +9,7 @@
 }
 
 .ReserveInfoHooksRowHeader {
+  font-size: 0.9em;
   font-weight: var(--font-weight-regular);
   overflow: hidden;
   text-decoration: none;
@@ -43,6 +44,10 @@
   padding: 0.125em 0;
 }
 
+.ReserveInfoHooksRowHeader {
+  padding-left: 0.5em;
+}
+
 @media (max-width: 1023px) {
   .ReserveInfoHooksRow {
     border-bottom-color: var(--color-border-dark);
@@ -50,6 +55,7 @@
   }
 
   .ReserveInfoHooksRowHeader {
+    font-size: 1em;
     font-weight: var(--font-weight-semibold);
   }
 

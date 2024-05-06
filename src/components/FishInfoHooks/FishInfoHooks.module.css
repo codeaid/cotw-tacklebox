@@ -102,10 +102,6 @@
   }
 }
 
-@media (max-width: 991px) {
-
-}
-
 @media (max-width: 767px) {
   .FishInfoHooks {
     grid-template-columns: repeat(5, 1fr);
