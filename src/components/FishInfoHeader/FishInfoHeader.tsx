@@ -10,7 +10,7 @@ export const FishInfoHeader = (props: FishInfoHeaderProps) => {
       <h1 className={styles.FishInfoHeaderTitle}>{fish.name}</h1>
 
       <div className={styles.FishInfoHeader}>
-        <p className={styles.FishInfoHeaderDescription}>{fish.description}</p>
+        <div className={styles.FishInfoHeaderDescription}>{fish.description}</div>
 
         <Image
           alt={fish.name}
