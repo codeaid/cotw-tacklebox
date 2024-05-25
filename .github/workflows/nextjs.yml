@@ -126,6 +126,7 @@ jobs:
     env:
       NEXT_PUBLIC_BASE_URL: "https://codeaid.github.io"
       NEXT_PUBLIC_BASE_PATH: "/cotw-tacklebox"
+      NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-65MNFNW5EL"
     needs:
       - audit
       - lint
