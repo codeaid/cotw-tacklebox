@@ -1,7 +1,8 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata, Viewport } from 'next';
 import { type PropsWithChildren } from 'react';
 import { Header, Layout, NavigationRail } from 'components';
-import { metadataBase } from 'config/app';
+import { googleAnalyticsId, metadataBase } from 'config/app';
 import { pageElementId } from 'config/dom';
 import { sourceSansPro } from 'fonts';
 import styles from './layout.module.css';
@@ -29,6 +30,7 @@ export const viewport: Viewport = {
 const RootLayout = (props: PropsWithChildren) => (
   <html className={sourceSansPro.className} lang="en">
     <body className={styles.Body}>
+      <GoogleAnalytics gaId={googleAnalyticsId} />
       <Header />
 
       <div className={styles.Page} id={pageElementId}>

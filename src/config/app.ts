@@ -2,3 +2,6 @@
 export const baseURL = process.env.NEXT_PUBLIC_BASE_URL || '';
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export const metadataBase = process.env.NODE_ENV === 'development' ? undefined : new URL(baseURL);
+
+// Google Analytics tracking ID
+export const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ?? '';
