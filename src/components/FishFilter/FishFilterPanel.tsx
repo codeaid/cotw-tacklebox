@@ -1,6 +1,7 @@
 'use client';
 
-import { type ChangeEvent, useCallback, useMemo } from 'react';
+import type { ChangeEvent } from 'react';
+import { useCallback, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { IoCloseSharp } from 'react-icons/io5';
 import { Button } from 'components/Button';
@@ -13,8 +14,10 @@ import traits, { traitMap } from 'config/traits';
 import { sortByName } from 'lib/sort';
 import type { BaitId, LureId } from 'types/baits';
 import type { HabitatId } from 'types/habitats';
-import { type HookSize, hookSizes } from 'types/hooks';
-import { type ReserveId, reserveIds } from 'types/reserves';
+import { hookSizes } from 'types/hooks';
+import type { HookSize } from 'types/hooks';
+import { reserveIds } from 'types/reserves';
+import type { ReserveId } from 'types/reserves';
 import type { TraitId } from 'types/traits';
 import { FishFilterOptions } from './FishFilterOptions';
 import type { FishFilterPanelProps } from './types';

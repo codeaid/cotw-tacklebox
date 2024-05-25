@@ -14,7 +14,7 @@ import {
   filterByTrait,
 } from 'lib/filter';
 import { sortFishes } from 'lib/sort';
-import { type BaitId, type LureId } from 'types/baits';
+import type { BaitId, LureId } from 'types/baits';
 import type { HabitatId } from 'types/habitats';
 import type { HookSize } from 'types/hooks';
 import type { ReserveId } from 'types/reserves';

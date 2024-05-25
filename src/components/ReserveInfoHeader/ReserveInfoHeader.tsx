@@ -14,7 +14,7 @@ export const ReserveInfoHeader = (props: ReserveInfoHeaderProps) => {
           alt={reserve.name}
           className={styles.ReserveInfoHeaderImage}
           height={256}
-          priority={true}
+          priority
           src={reserve.image.color}
           width={192}
         />

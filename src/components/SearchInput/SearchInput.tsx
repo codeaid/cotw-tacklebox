@@ -232,10 +232,10 @@ export const SearchInput = () => {
           exitActive: styles.SearchInputResultsExitActive,
         }}
         in={expanded}
-        mountOnEnter={true}
+        mountOnEnter
         nodeRef={resultsRef}
         timeout={150}
-        unmountOnExit={true}
+        unmountOnExit
       >
         {searchResults}
       </CSSTransition>

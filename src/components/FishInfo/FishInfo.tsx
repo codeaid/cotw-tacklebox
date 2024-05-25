@@ -25,7 +25,7 @@ export const FishInfo = (props: FishInfoProps) => {
       <FishInfoHeader fish={fish} />
 
       <InfoSection title="Details">
-        <FishInfoDetails baitData={baitData} fishData={fishData} fish={fish} />
+        <FishInfoDetails baitData={baitData} fish={fish} fishData={fishData} />
       </InfoSection>
 
       {!fish.legendary ? (

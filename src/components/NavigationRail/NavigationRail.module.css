@@ -55,3 +55,9 @@
 .NavigationRailMenuItemActive .NavigationRailMenuItemLabel {
   color: var(--color-primary);
 }
+
+/*@media (max-width: 575px) {*/
+/*  .NavigationRail {*/
+/*    display: none;*/
+/*  }*/
+/*}*/

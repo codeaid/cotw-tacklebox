@@ -1,12 +1,6 @@
 import type { BaitId, LureId } from 'types/baits';
-import {
-  type FishEntity,
-  type FishId,
-  type FishIdGeneric,
-  type FishIdLegendary,
-  fishIdsGeneric,
-  fishIdsLegendary,
-} from 'types/fishes';
+import type { FishEntity, FishId, FishIdGeneric, FishIdLegendary } from 'types/fishes';
+import { fishIdsGeneric, fishIdsLegendary } from 'types/fishes';
 import type { HabitatId } from 'types/habitats';
 import type { HookSize } from 'types/hooks';
 import type { ReserveId } from 'types/reserves';

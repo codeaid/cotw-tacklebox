@@ -64,12 +64,12 @@ export const FishInfoWeight = (props: FishInfoWeightProps) => {
         colorBy="group"
         data={chartData}
         defs={svgDefs}
-        enableGridX={true}
+        enableGridX
         enableGridY={false}
         fill={svgFills}
         gridXValues={tickValues}
         height={height}
-        isInteractive={true}
+        isInteractive
         layout="horizontal"
         margin={{
           bottom: 30,

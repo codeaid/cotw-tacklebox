@@ -17,9 +17,9 @@ export const FishGrid = (props: FishGridProps) => {
               alt={entity.name}
               className={styles.FishGridItemImage}
               height={150}
-              priority={true}
+              priority
               src={entity.image.small}
-              unoptimized={true}
+              unoptimized
               width={150}
             />
             <div

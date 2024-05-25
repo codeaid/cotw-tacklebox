@@ -1,7 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
-import { type InputHTMLAttributes, useState } from 'react';
+import type { InputHTMLAttributes } from 'react';
+import { useState } from 'react';
 import { sourceSansPro } from 'fonts';
 import styles from './Input.module.css';
 

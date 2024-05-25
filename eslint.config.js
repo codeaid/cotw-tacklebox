@@ -13,7 +13,7 @@ const tsconfigPath = resolve(process.cwd(), 'tsconfig.json');
 /** @type {Array<import('eslint').Linter.FlatConfig>} */
 module.exports = [
   {
-    ignores: ['**/out/', '**/*.{js,json,md,mjs,scss}'],
+    ignores: ['**/.next', '**/out/', '**/*.{js,json,md,mjs,scss}'],
   },
 
   {
@@ -40,10 +40,24 @@ module.exports = [
   },
 
   {
-    files: ['./src/**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx}'],
     rules: {
       // Enforce consistent usage of type imports
       '@typescript-eslint/consistent-type-imports': 'error',
+
+      // Enforce shorthand boolean component properties
+      'react/jsx-boolean-value': ['error', 'never'],
+
+      // Ensure component properties are alphabetically sorted with callbacks being last
+      'react/jsx-sort-props': [
+        'error',
+        {
+          callbacksLast: true,
+        },
+      ],
+
+      // Ensure the `type` keyword is always outside the import braces
+      'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 
       // Enforce consistent import order
       'import/order': [

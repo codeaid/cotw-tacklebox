@@ -1,6 +1,6 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata, Viewport } from 'next';
-import { type PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { Header, Layout, NavigationRail } from 'components';
 import { googleAnalyticsId, metadataBase } from 'config/app';
 import { pageElementId } from 'config/dom';

@@ -47,7 +47,7 @@ export const ReserveInfoHooks = (props: ReserveInfoHooksProps) => {
               </Link>
             </div>
             <div className={styles.ReserveInfoHooksRowValue}>
-              <FishInfoHooks data={fish.hookData} compact={true} />
+              <FishInfoHooks compact data={fish.hookData} />
             </div>
           </div>
         ))}
@@ -66,7 +66,7 @@ export const ReserveInfoHooks = (props: ReserveInfoHooksProps) => {
               </Link>
             </div>
             <div className={styles.ReserveInfoHooksRowValue}>
-              <FishInfoHooks data={fish.hookData} compact={true} />
+              <FishInfoHooks compact data={fish.hookData} />
             </div>
           </div>
         ))}
