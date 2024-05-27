@@ -7,6 +7,7 @@
 .StepperControls {
   background-color: var(--color-bg-dark-transparent);
   display: flex;
+  height: 2.6em;
   transition: background-color 75ms ease-in-out;
 }
 
