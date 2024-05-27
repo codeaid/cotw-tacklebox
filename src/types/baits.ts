@@ -72,3 +72,15 @@ export interface LureMethod {
   id: LureMethodId;
   name: string;
 }
+
+export type BaitFilterType = 'all' | 'available' | '1' | '2' | '3';
+
+export interface BaitFilterValue {
+  bait: Bait;
+  chance?: number;
+}
+
+export interface LureFilterValue {
+  lure: Lure;
+  value: Partial<LureChanceMap>;
+}

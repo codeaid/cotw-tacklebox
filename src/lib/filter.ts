@@ -1,4 +1,14 @@
-import type { BaitId, LureId } from 'types/baits';
+import type {
+  Bait,
+  BaitFilterType,
+  BaitFilterValue,
+  BaitId,
+  Lure,
+  LureChanceMap,
+  LureFilterValue,
+  LureId,
+} from 'types/baits';
+import type { BaitData } from 'types/data';
 import type { FishEntity, FishId, FishIdGeneric, FishIdLegendary } from 'types/fishes';
 import { fishIdsGeneric, fishIdsLegendary } from 'types/fishes';
 import type { HabitatId } from 'types/habitats';
@@ -86,6 +96,66 @@ export const filterByReserve = (reserveIds: ReserveId[], fish: FishEntity) =>
  */
 export const filterByTrait = (traitIds: TraitId[], fish: FishEntity) =>
   traitIds.length ? traitIds.every(trait => fish.traits.includes(trait)) : true;
+
+/**
+ * Filter a list of baits and output them together with their associated values
+ *
+ * @param baits List of baits to filter
+ * @param filter Bait filter type
+ * @param data Source bait data
+ */
+export const getFilteredBaitValues = (baits: Bait[], filter: BaitFilterType, data: BaitData) =>
+  baits
+    .map<BaitFilterValue>(bait => ({ bait, chance: data.bait ? data.bait[bait.id] : undefined }))
+    .filter(item => {
+      if (filter === 'all') {
+        return true;
+      }
+
+      switch (filter) {
+        case '1':
+          return item.chance === 1;
+        case '2':
+          return item.chance === 2;
+        case '3':
+          return item.chance === 3;
+        case 'available':
+        default:
+          return !!item.chance;
+      }
+    });
+
+/**
+ * Filter a list of lures and output them together with their associated values
+ *
+ * @param lures List of lures to filter
+ * @param filter Bait filter type
+ * @param data Source bait data
+ */
+export const getFilteredLureValues = (lures: Lure[], filter: BaitFilterType, data: BaitData) =>
+  lures
+    .map<LureFilterValue>(lure => ({
+      lure,
+      value: data[lure.id] ?? ({} as Partial<LureChanceMap>),
+    }))
+    .filter(item => {
+      if (filter === 'all') {
+        return true;
+      }
+
+      const values = Object.values(item.value ?? {});
+      switch (filter) {
+        case '1':
+          return values.includes(1);
+        case '2':
+          return values.includes(2);
+        case '3':
+          return values.includes(3);
+        case 'available':
+        default:
+          return values.length > 0;
+      }
+    });
 
 /**
  * Check if the specified fish entity represents a generic fish

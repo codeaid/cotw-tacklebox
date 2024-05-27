@@ -2,6 +2,7 @@
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: 1fr;
+  margin-top: 1rem;
 }
 
 /**
@@ -99,6 +100,13 @@
   text-align: center;
 }
 
+.FishInfoBaitsEmpty {
+  font-size: 0.9em;
+  padding: 1em;
+  text-align: center;
+  user-select: none;
+}
+
 /**
  * Table rows containing bait names and chance columns
  */
@@ -120,8 +128,10 @@
 }
 
 .FishInfoBaitsValue {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
   user-select: none;
 }
 
@@ -140,6 +150,8 @@
  */
 .FishInfoBaitsValues {
   border-bottom: thin solid var(--color-border-dark);
+  display: flex;
+  justify-content: center;
 }
 
 /**

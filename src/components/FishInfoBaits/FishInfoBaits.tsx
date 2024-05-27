@@ -1,14 +1,13 @@
+'use client';
+
 import clsx from 'clsx';
-import { useCallback } from 'react';
-import {
-  baitKindMap,
-  baitsBottom,
-  baitsLive,
-  baitsNatural,
-  lureMethods,
-  lures,
-} from 'config/baits';
-import type { Bait, Lure, LureChanceMap } from 'types/baits';
+import { useMemo, useState } from 'react';
+import { Option, Stepper } from 'components';
+import { baitKindMap, baitsBottom, baitsLive, baitsNatural, lures } from 'config/baits';
+import { getFilteredBaitValues, getFilteredLureValues } from 'lib/filter';
+import type { BaitFilterType, BaitFilterValue } from 'types/baits';
+import { FishInfoBaitsBaits } from './FishInfoBaitsBaits';
+import { FishInfoBaitsLures } from './FishInfoBaitsLures';
 import { FishInfoBaitsRating } from './FishInfoBaitsRating';
 import type { FishInfoBaitsProps } from './types';
 import styles from './FishInfoBaits.module.css';
@@ -16,133 +15,128 @@ import styles from './FishInfoBaits.module.css';
 export const FishInfoBaits = (props: FishInfoBaitsProps) => {
   const { data } = props;
 
+  // All available bait and lure filter types
+  const filterTypes: BaitFilterType[] = ['all', 'available', '1', '2', '3'];
+
+  // Currently selected bait and lure filter types
+  const [filter, setFilter] = useState<BaitFilterType>('available');
+
+  // Bait values filtered to only include matching ones
+  const baitValues = useMemo<[BaitFilterValue[], string, string, string][]>(
+    () => [
+      [
+        getFilteredBaitValues(baitsNatural, filter, data),
+        baitKindMap.natural.name,
+        styles.FishInfoBaitsKindWrapperNatural,
+        styles.FishInfoBaitsKindHeaderNatural,
+      ],
+      [
+        getFilteredBaitValues(baitsLive, filter, data),
+        baitKindMap.live.name,
+        styles.FishInfoBaitsKindWrapperLive,
+        styles.FishInfoBaitsKindHeaderLive,
+      ],
+      [
+        getFilteredBaitValues(baitsBottom, filter, data),
+        baitKindMap.bottom.name,
+        styles.FishInfoBaitsKindWrapperBottom,
+        styles.FishInfoBaitsKindHeaderBottom,
+      ],
+    ],
+    [data, filter],
+  );
+
+  // Lure values filtered to only include matching ones
+  const lureValues = useMemo(() => getFilteredLureValues(lures, filter, data), [data, filter]);
+
   /**
-   * Render an individual bait chance value
+   * Render all available bait category elements
    */
-  const renderValue = useCallback((value?: number) => {
-    if (typeof value !== 'number') {
+  const renderedBaits = useMemo(() => {
+    // Check if any of the bait type categories have baits included after filtering
+    const hasValues = baitValues.filter(([value]) => value.length > 0).length > 0;
+
+    if (!hasValues) {
       return (
-        <div
-          className={clsx(styles.FishInfoBaitsValue, {
-            [styles.FishInfoBaitsValueEmpty]: typeof value === 'undefined',
-          })}
-        >
-          ~
+        <div className={clsx(styles.FishInfoBaitsValueEmpty, styles.FishInfoBaitsEmpty)}>
+          No baits available
         </div>
       );
     }
 
     return (
-      <div className={styles.FishInfoBaitsValue}>
-        <FishInfoBaitsRating size={0.5} value={value} />
+      <div className={styles.FishInfoBaitsCategoryWrapperBaits}>
+        {baitValues.map(([values, category, wrapperClassName, headerClassName]) => (
+          <FishInfoBaitsBaits
+            caption={category}
+            headerClassName={headerClassName}
+            values={values}
+            wrapperClassName={wrapperClassName}
+          />
+        ))}
       </div>
     );
-  }, []);
+  }, [baitValues]);
 
   /**
-   * Render a row in the baits table
+   * Render all available lure rows
    */
-  const renderBaitRow = useCallback(
-    (bait: Bait) => {
-      const value = data.bait ? data.bait[bait.id] : undefined;
-
+  const renderedLures = useMemo(() => {
+    if (!lureValues.length) {
       return (
-        <div className={styles.FishInfoBaitsRow} key={bait.id}>
-          <div className={styles.FishInfoBaitsKey}>{bait.name}</div>
-          <div className={styles.FishInfoBaitsValues}>{renderValue(value)}</div>
+        <div className={clsx(styles.FishInfoBaitsValueEmpty, styles.FishInfoBaitsEmpty)}>
+          No lures available
         </div>
       );
-    },
-    [data.bait, renderValue],
-  );
+    }
 
-  /**
-   * Render a row in the lures table
-   */
-  const renderLureRow = useCallback(
-    (lure: Lure) => {
-      const values: Partial<LureChanceMap> = data[lure.id] ?? {};
-
-      return (
-        <div className={clsx(styles.FishInfoBaitsRow, styles.FishInfoBaitsRowLures)} key={lure.id}>
-          <div className={styles.FishInfoBaitsKey}>{lure.name}</div>
-          <div className={clsx(styles.FishInfoBaitsValues, styles.FishInfoBaitsValuesLures)}>
-            {lureMethods.map(method => renderValue(values[method.id]))}
-          </div>
-        </div>
-      );
-    },
-    [data, renderValue],
-  );
+    return <FishInfoBaitsLures values={lureValues} />;
+  }, [lureValues]);
 
   return (
-    <div className={styles.FishInfoBaits}>
-      <section>
-        <div
-          className={clsx(
-            styles.FishInfoBaitsCategoryHeader,
-            styles.FishInfoBaitsCategoryHeaderBaits,
-          )}
-        >
-          Baits
-        </div>
+    <>
+      <Option label="Filter">
+        <Stepper<BaitFilterType>
+          labels={{
+            'all': 'All',
+            'available': 'Available',
+            '1': <FishInfoBaitsRating size={0.5} value={1} />,
+            '2': <FishInfoBaitsRating size={0.5} value={2} />,
+            '3': <FishInfoBaitsRating size={0.5} value={3} />,
+          }}
+          selected={filter}
+          values={filterTypes}
+          onChange={setFilter}
+        />
+      </Option>
 
-        <div className={styles.FishInfoBaitsCategoryWrapperBaits}>
-          {(
-            [
-              [
-                baitKindMap.natural.name,
-                styles.FishInfoBaitsKindWrapperNatural,
-                styles.FishInfoBaitsKindHeaderNatural,
-                baitsNatural,
-              ],
-              [
-                baitKindMap.live.name,
-                styles.FishInfoBaitsKindWrapperLive,
-                styles.FishInfoBaitsKindHeaderLive,
-                baitsLive,
-              ],
-              [
-                baitKindMap.bottom.name,
-                styles.FishInfoBaitsKindWrapperBottom,
-                styles.FishInfoBaitsKindHeaderBottom,
-                baitsBottom,
-              ],
-            ] as [string, string, string, Bait[]][]
-          ).map(([caption, wrapperClassName, headerClassName, baits]) => (
-            <div className={wrapperClassName} key={caption}>
-              <div className={clsx(styles.FishInfoBaitsKindHeader, headerClassName)}>{caption}</div>
-              {baits.map(renderBaitRow)}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <div
-          className={clsx(
-            styles.FishInfoBaitsCategoryHeader,
-            styles.FishInfoBaitsCategoryHeaderLures,
-          )}
-        >
-          Lures
-        </div>
-
-        <div>
-          <div className={clsx(styles.FishInfoBaitsRow, styles.FishInfoBaitsRowLures)}>
-            <div>&#8203;</div>
-            <div className={clsx(styles.FishInfoBaitsValues, styles.FishInfoBaitsValuesLures)}>
-              {lureMethods.map(method => (
-                <div className={styles.FishInfoBaitsMethodHeader} key={method.id}>
-                  {method.name}
-                </div>
-              ))}
-            </div>
+      <div className={styles.FishInfoBaits}>
+        <section>
+          <div
+            className={clsx(
+              styles.FishInfoBaitsCategoryHeader,
+              styles.FishInfoBaitsCategoryHeaderBaits,
+            )}
+          >
+            Baits
           </div>
 
-          {lures.map(renderLureRow)}
-        </div>
-      </section>
-    </div>
+          {renderedBaits}
+        </section>
+
+        <section>
+          <div
+            className={clsx(
+              styles.FishInfoBaitsCategoryHeader,
+              styles.FishInfoBaitsCategoryHeaderLures,
+            )}
+          >
+            Lures
+          </div>
+
+          {renderedLures}
+        </section>
+      </div>
+    </>
   );
 };

@@ -1,6 +1,5 @@
 .FishInfoBaitsRating {
   display: inline-flex;
-  height: 1em;
   margin: 0 0.2em;
   user-select: none;
 }
@@ -10,7 +9,7 @@
   border-radius: 50%;
   display: block;
   height: 1em;
-  margin: 0 0.1em;
+  margin: 0 0.13em;
   width: 1em;
 }
 
