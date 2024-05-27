@@ -7,6 +7,13 @@ const nextConfig = {
   },
   output: 'export',
   reactStrictMode: true,
+  redirects: async () => [
+    {
+      source: '/',
+      destination: '/fishes',
+      permanent: true,
+    }
+  ],
   swcMinify: true,
   trailingSlash: false,
   webpack(config) {

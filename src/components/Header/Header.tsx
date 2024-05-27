@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 
 export const Header = () => (
   <div className={styles.Header}>
-    <Link className={styles.HeaderLogo} href="/fishes">
+    <Link className={styles.HeaderLogo} href="/">
       <Image alt="TackleBox logo" height={40} src={logoImg.src} width={184} />
     </Link>
 
