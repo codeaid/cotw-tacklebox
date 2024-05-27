@@ -3,6 +3,8 @@
   border: thin solid var(--color-border-dark-transparent);
   border-radius: 0.1rem;
   display: flex;
+  font-size: 0.85em;
+  user-select: none;
 }
 
 .OptionLabel {
