@@ -16,7 +16,7 @@ export const FishInfoBaits = (props: FishInfoBaitsProps) => {
   const { data } = props;
 
   // All available bait and lure filter types
-  const filterTypes: BaitFilterType[] = ['all', 'available', '1', '2', '3'];
+  const filterTypes: BaitFilterType[] = ['all', 'available', '3', '2', '1'];
 
   // Currently selected bait and lure filter types
   const [filter, setFilter] = useState<BaitFilterType>('available');
