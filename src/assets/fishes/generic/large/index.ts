@@ -28,6 +28,7 @@ import cutthroatTrout from './cutthroat_trout.png';
 import europeanBullhead from './european_bullhead.png';
 import europeanEel from './european_eel.png';
 import europeanPerch from './european_perch.png';
+import freshwaterDrum from './freshwater_drum.png';
 import goldenTrout from './golden_trout.png';
 import grassCarp from './grass_carp.png';
 import grayling from './grayling.png';
@@ -48,6 +49,7 @@ import rainbowTrout from './rainbow_trout.png';
 import redbreastKurper from './redbreast_kurper.png';
 import rednoseLabeo from './rednose_labeo.png';
 import roach from './roach.png';
+import rockBass from './rock_bass.png';
 import rudd from './rudd.png';
 import ruffe from './ruffe.png';
 import sauger from './sauger.png';
@@ -60,6 +62,8 @@ import thicklipMullet from './thicklip_mullet.png';
 import thinlipMullet from './thinlip_mullet.png';
 import tigerMuskie from './tiger_muskie.png';
 import walleye from './walleye.png';
+import welsCatfish from './wels_catfish.png';
+import whiteCrappie from './white_crappie.png';
 import yellowPerch from './yellow_perch.png';
 import zander from './zander.png';
 
@@ -93,6 +97,7 @@ const map: Record<FishIdGeneric, string> = {
   'european-bullhead': europeanBullhead.src,
   'european-eel': europeanEel.src,
   'european-perch': europeanPerch.src,
+  'freshwater-drum': freshwaterDrum.src,
   'golden-trout': goldenTrout.src,
   'grass-carp': grassCarp.src,
   'grayling': grayling.src,
@@ -118,6 +123,7 @@ const map: Record<FishIdGeneric, string> = {
   'rednose-labeo': rednoseLabeo.src,
   'roach-es': roach.src,
   'roach-no': roach.src,
+  'rock-bass': rockBass.src,
   'rudd': rudd.src,
   'ruffe': ruffe.src,
   'sauger': sauger.src,
@@ -131,6 +137,8 @@ const map: Record<FishIdGeneric, string> = {
   'thinlip-mullet': thinlipMullet.src,
   'tiger-muskie': tigerMuskie.src,
   'walleye': walleye.src,
+  'wels-catfish': welsCatfish.src,
+  'white-crappie': whiteCrappie.src,
   'yellow-perch': yellowPerch.src,
   'zander-es': zander.src,
   'zander-no': zander.src,

@@ -41,6 +41,7 @@ export const baitsNatural = (
     { id: 'dough', name: 'Dough' },
     { id: 'eggs', name: 'Eggs' },
     { id: 'hotdog', name: 'Hotdog' },
+    { id: 'lake-mix', name: 'Lake Mix' },
     { id: 'liver', name: 'Liver' },
     { id: 'marshmallow', name: 'Marshmallow' },
   ] as Bait<BaitIdNatural>[]

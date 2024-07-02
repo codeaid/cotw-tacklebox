@@ -180,6 +180,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'freshwater-drum',
+    name: 'Freshwater Drum',
+    description: 'The Freshwater Drum is a fish regularly occurring in North and Central America. Its scientific name comes from the Greek for \'single back\', and the Latin for \'grunting\'. This name is derived from the grunting noise that mature males make. This noise comes from a special set of muscles within their body cavity that vibrate against their swim bladder. The purpose of the grunting is unknown, but as it is only present in mature males during the spawning season, it is assumed to have something to do with spawning. The Freshwater Drum prefers clear water, but it is tolerant of turbid and murky water.',
+    reserves: ['us'],
+  },
+  {
     id: 'golden-trout',
     name: 'Golden Trout',
     description: 'The Golden Trout, also known as the Californian Golden Trout, is a species of trout native to California. The Wyoming Game & Fish Department state record Golden Trout measured 28 in (71 cm) and weighed 11.3 lb (5.1 kg), caught in Cook Lake, Wyoming in 1948. In their native habitat, adults range from 6-12 in (15-30 cm) long. Fish over 12 in (30 cm) are considered large. Golden Trout that have been transplanted to lakes have been recorded up to 11 lb (5 kg).',
@@ -331,6 +337,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'rock-bass',
+    name: 'Rock Bass',
+    description: 'The Rock Bass, also known as the Rock Perch and Red Eye, is a freshwater fish native to North America. They are similar in appearance to the Smallmouth Bass, however are typically significantly smaller. The average Rock Bass is around 6-10 in (15-25 cm) long, and rarely weigh over 1 lb (0.4 kg). Rock Bass can live to be around 12 years old. They prefer clear, rocky, and vegetated stream pools and lake margins.',
+    reserves: ['us'],
+  },
+  {
     id: 'rudd',
     name: 'Rudd',
     description: 'The Common Rudd is a freshwater fish spread around Europe and middle Asia. The Rudd is very similar to the Roach, except with yellow eyes with a big red spot above the pupil. The Rudd grows up to a size of 18-20 in (45-50 cm) with an average of about 10 in (25 cm). Rudd were reported in the United States at least as early as 1925. It is unlawful to possess live Rudd in the state of Tennessee. No person,or corporation can possess, sell, offer for sale, import, bring or release Rudd into the State of Alabama.',
@@ -406,6 +418,18 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     id: 'walleye',
     name: 'Walleye',
     description: 'The Walleye, also known as the Yellow Perch or Yellow Pickerel, is a freshwater fish native to Canada and most of North America. The fish is called Walleye due to its opaque, reflective eyes which allow it to see in dark conditions. Walleyes grow to around 31 in (80 cm) in length, and weigh up to about 20 lb (9 kg). The maximum recorded size for the fish is 42 in (107 cm) in length and 29 lb (13 kg) in weight.',
+    reserves: ['us'],
+  },
+  {
+    id: 'wels-catfish',
+    name: 'Wels Catfish',
+    description: 'The Wels Catfish, also called Sheatfish or just Wels, is a large species of catfish native to wide areas of central, southern, and eastern Europe. It has been introduced to Western Europe as a prized sport fish, and is now found from the United Kingdom to Kazakhstan and China, and south to Greece and Turkey. With a total length possibly exceeding 9.8 ft (3 m) and a maximum weight of over 440 lb (200 kg), the Wels is the largest freshwater fish in Europe and Western Asia, however such lengths are unproven in modern times. Younger Wels Catfish are about 31-51 in (80-130cm) in length, and up to about 33 lb (15 kg) in weight. The Wels Catfish is a long-lived species and can live up to 70 years old.',
+    reserves: ['es'],
+  },
+  {
+    id: 'white-crappie',
+    name: 'White Crappie',
+    description: 'The White Crappie is a freshwater fish found in North America, and is one of the two species of Crappies along with the Black Crappie. They are also known as the goldring, a name derived from the vaguely vertical bars or \'rings\' along their bodies, silver perch, white perch and sac-a-lait. White crappies can be found in large rivers, reservoirs, and lakes, and are more tolerant of turbid waters than Black Crappies, in which they normally outnumber their black brethren. The ship USS Goldring is named after the fish.',
     reserves: ['us'],
   },
   {

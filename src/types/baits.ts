@@ -17,6 +17,7 @@ export const baitIdsNatural = [
   'dough',
   'eggs',
   'hotdog',
+  'lake-mix',
   'liver',
   'marshmallow',
 ] as const;
