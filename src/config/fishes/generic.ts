@@ -37,7 +37,7 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
   {
     id: 'arctic-char',
     name: 'Arctic Char',
-    description: "The Arctic Char is a cold-water fish, native to alpine lakes and arctic coastal waters. The English name is thought to derive from the Old Irish ceara/cera for 'blood red', referring to its pink-red belly. This would also connect with its Welsh name torgoch, 'red belly'. No other freshwater fish is found as far north as the Artic Char. The Arctic Char is closely related to both salmon and lake trout, and has many characteristics of both. The fish is highly variable in color, depending on the time of year and the environmental conditions of the lake where it lives. Individual fish can weigh 20 lb (9kg). Generally, whole market-sized fish are around 2-5 lb (1-2 kg).",
+    description: "The Arctic Char is a cold-water fish, native to alpine lakes and arctic coastal waters. The English name is thought to derive from the Old Irish ceara/cera for 'blood red', referring to its pink-red belly. This would also connect with its Welsh name torgoch, 'red belly'. No other freshwater fish is found as far north as the Arctic Char. The Arctic Char is closely related to both salmon and lake trout, and has many characteristics of both. The fish is highly variable in color, depending on the time of year and the environmental conditions of the lake where it lives. Individual fish can weigh 20 lb (9kg). Generally, whole market-sized fish are around 2-5 lb (1-2 kg).",
     reserves: ['no'],
   },
   {
@@ -357,7 +357,7 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
   {
     id: 'sauger',
     name: 'Sauger',
-    description: 'The Sauger is a freshwater fish that resembles its close relative, the walleye. The typical sauger is 11-14 oz (0.3-0.4 kg) in weight. Saugers require warmer summer water temperatures of 68-83 F (20-28 C). Their need for warm water is thought to affect the nothern and western boundaries of their range. Saugers feed on a variety of invertebrates and small fishes depending on the time of year and size of the Sauger. The channel catfish is a classic prey of the Sauger. Saugers are more likely to be found in large rivers with deep pools. They encounter a variety of habitats because of their migratory tendencies.',
+    description: 'The Sauger is a freshwater fish that resembles its close relative, the walleye. The typical sauger is 11-14 oz (0.3-0.4 kg) in weight. Saugers require warmer summer water temperatures of 68-83 F (20-28 C). Their need for warm water is thought to affect the northern and western boundaries of their range. Saugers feed on a variety of invertebrates and small fishes depending on the time of year and size of the Sauger. The channel catfish is a classic prey of the Sauger. Saugers are more likely to be found in large rivers with deep pools. They encounter a variety of habitats because of their migratory tendencies.',
     reserves: ['us'],
   },
   {
