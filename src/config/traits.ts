@@ -39,6 +39,11 @@ const data: Omit<Trait, 'image'>[] = [
     description: 'Gets easily scared by human presence',
   },
   {
+    id: 'evil-eye',
+    name: 'Evil Eye',
+    description: 'Every so often the Grootslang will spook all other nearby fish',
+  },
+  {
     id: 'hard-fighter',
     name: 'Hard Fighter',
     description: 'Tries its best to get off the hook',
@@ -72,6 +77,16 @@ const data: Omit<Trait, 'image'>[] = [
     id: 'rising-sun',
     name: 'Rising Sun',
     description: 'Will rise to the surface during daytime, but hides as soon as it spots tackle',
+  },
+  {
+    id: 'run-for-your-money',
+    name: 'Run For Your Money',
+    description: 'Mamlambo always maintains a healthy separation from you, until engaged in a fight',
+  },
+  {
+    id: 'siren-song',
+    name: 'Siren Song',
+    description: 'The Karoo Mermaid emits a lugubrious song that temps even the most seasoned angler',
   },
   {
     id: 'social-distancing',

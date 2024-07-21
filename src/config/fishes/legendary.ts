@@ -60,6 +60,25 @@ const fishes: Omit<Fish<FishIdLegendary>, 'image' | 'legendary'>[] = [
     description: "La Mostrenca is a tale that is told to Andalusian children to scare them to an early, silent sleep; for if they are not good, La Mostrenca will come. A terrible tale made manifest by way of gaping maw, a hunched, pocked, gurgling denouement ripping the tide wide open in search of fresh ears to burrow into. She hides not in cupboards or under beds, but in angler's nets, wide eyed and slavering in sleepless death, waiting to devour them whole.",
     reserves: ['es'],
   },
+
+  {
+    id: 'karoo-mermaid',
+    name: 'Karoo Mermaid',
+    description: "The Karoo Mermaid is as bewitchingly beautiful as a Sharptooth Catfish can possibly be, which is dubious at best; although we'll plant this one firmly within the eye of the beholder.It is said to have dark hair bound in fishtails, and a warbling, captivating voice that lures unsuspecting victims to a watery grave. The moniker in question had been passed down from generation to generation, drawing very loosely from cave paintings created by the Khoi-san people, which depict humanoid figures with fish-like tails. On closer inspection you'll see that this mermaid has a lot more 'mer' than 'maid' but the allure is the same. Be careful not to let her pull you under.",
+    reserves: ['sa'],
+  },
+  {
+    id: 'grootslang',
+    name: 'Grootslang',
+    description: "The Grootslang, or 'Big Snake', is a mythical creature described in African folklore since the early 1800s. The gods supposedly made a mistake by granting the Grootslang excessive power and strength, causing it to dominate all other animals. In order to prevent the creature from wreaking havoc on the world, the gods banished it to a cave. According to legend, it is a massive water creature that resembles a mixture of elephant and snake.The creature is often said to be around 40â€\"50 ft long and leaves tracks that are 3 ft wide. It is said that the Grootslang guards a large hoard of diamonds, and is believed to be as ancient as the world itself, created by the gods.This eel definitely isn't quite as big or as impressive as that, but for an eel, it's really something and is almost deserving of the moniker.",
+    reserves: ['sa'],
+  },
+  {
+    id: 'mamlambo',
+    name: 'Mamlambo',
+    description: "Mamlambo is a deity in South African and Zulu mythology known as the 'goddess of rivers', typically described as a large snake-like creature.Over the years there have been many sightings of Mamlambo, including one in 1997, wherein villages reported that they had seen a creature with the head of a horse, the lower body of a fish, short legs, and the neck of a snake, and that it shone with a green light at night. During the period between January and April 1997, as many as nine deaths had been attributed to the Mamlambo. According to police, the victims had been in the water a while and had the soft parts of their head and necks eaten by crabs; local villagers, on the other hand, claimed that these mutilations had been caused by the Mamlambo's habit of eating faces and brains. For this reason, the Mamlambo is often referred to as 'the Brain Sucker'. The Mamlambo tends to be associated with Western forms of prosperity, like money, so she is often depicted as a Western mermaid. She has arisen in part from a sense of disconnection to a traditional, communal way of life, inequalities and imbalances in the social order, and the lure of Western materialism.",
+    reserves: ['sa'],
+  },
 ];
 
 export default fishes.map<Required<Fish<FishIdLegendary>>>(fish => ({
