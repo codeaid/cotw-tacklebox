@@ -7,7 +7,15 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { Button } from 'components/Button';
 import { Input } from 'components/Input';
 import { Separator } from 'components/Separator';
-import { baitMap, baitsBottom, baitsLive, baitsNatural, lureMap, lures } from 'config/baits';
+import {
+  baitMap,
+  baitsBottom,
+  baitsGround,
+  baitsLive,
+  baitsNatural,
+  lureMap,
+  lures,
+} from 'config/baits';
 import habitats, { habitatMap } from 'config/habitats';
 import { reserveMap } from 'config/reserves';
 import traits, { traitMap } from 'config/traits';
@@ -49,7 +57,10 @@ export const FishFilterPanel = (props: FishFilterPanelProps) => {
 
   // List of available baits
   const baitIds = useMemo(
-    () => [...baitsBottom, ...baitsLive, ...baitsNatural].sort(sortByName).map(bait => bait.id),
+    () =>
+      [...baitsBottom, ...baitsGround, ...baitsLive, ...baitsNatural]
+        .sort(sortByName)
+        .map(bait => bait.id),
     [],
   );
 
