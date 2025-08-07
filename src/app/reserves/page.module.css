@@ -6,8 +6,8 @@
 }
 
 .ReservesPageLink {
-  margin: 1rem;
-  max-width: 12rem;
+  max-width: 16rem;
+  padding: 2rem;
 }
 
 .ReservesPageLogo {
@@ -23,34 +23,9 @@
   transform: scale(1.02);
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 768px) {
   .ReservesPageLink {
-    margin: 2rem;
     max-width: 14rem;
-  }
-}
-
-@media (max-width: 899px) {
-  .ReservesPageLink {
-    max-width: 12rem;
-  }
-}
-
-@media (max-width: 639px) {
-  .ReservesPageLink {
-    max-width: 10rem;
-  }
-}
-
-@media (max-width: 489px) {
-  .ReservesPageLink {
-    margin: 1rem;
-    max-width: 40%;
-  }
-}
-
-@media (max-width: 359px) {
-  .ReservesPageLink {
-    max-width: 60%;
+    padding: 1.5rem;
   }
 }
