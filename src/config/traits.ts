@@ -29,6 +29,11 @@ const data: Omit<Trait, 'image'>[] = [
     description: 'At night, La Monstrenca rises to the surface to swim around and emits a deep, gurgling noise',
   },
   {
+    id: 'dragons-gate',
+    name: 'Dragon\'s Gate',
+    description: 'Legend has it that the Dragon\'s Gate is located at the top of a waterfall, cascading from the heavens themselves. Many Koi possess the strength to swim upstream against the powerful river current, but only the truly worthy will jump high enough to become a True Dragon.',
+  },
+  {
     id: 'eagle-eyed',
     name: 'Eagle Eyed',
     description: 'Alejandro Magno will not become interested in or bite any lures or bait, until a lure has been twitched in the water',
@@ -69,6 +74,11 @@ const data: Omit<Trait, 'image'>[] = [
     description: 'More active at night',
   },
   {
+    id: 'otashitonkurus-rock',
+    name: 'Otashitonkuru\'s Rock',
+    description: 'Tangled in the rage of a a lost eye, Amemasu wrenched rocks into islands. Near scale, claw and feather, this bearer of the Earth lurks for vengeance.',
+  },
+  {
     id: 'patient-scavenger',
     name: 'Patient Scavenger',
     description: 'Bites only baits left soaking in water for a while',
@@ -102,6 +112,11 @@ const data: Omit<Trait, 'image'>[] = [
     id: 'superiority-complex',
     name: 'Superiority Complex',
     description: 'Will bite eagerly and willingly, knowing it will emerge victorious',
+  },
+  {
+    id: 'the-deepest-reaches',
+    name: 'The Deepest Reaches',
+    description: 'Free of his cage, the Deathless One awaits in deep darkness. In the lake, all warriors are cold warriors.',
   },
 ];
 

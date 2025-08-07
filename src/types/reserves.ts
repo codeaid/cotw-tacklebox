@@ -1,4 +1,4 @@
-export const reserveIds = ['us', 'no', 'es', 'sa'] as const;
+export const reserveIds = ['us', 'no', 'es', 'sa', 'jp'] as const;
 
 export type ReserveId = (typeof reserveIds)[number];
 

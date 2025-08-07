@@ -29,6 +29,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'amur-catfish',
+    name: 'Amur Catfish',
+    description: 'The Japanese common catfish, commonly known as the Amur Catfish, Far Eastern Catfish, and Chinese catfish, is a freshwater catfish distributed across East Asia and Japan. It is carnivorous and feeds on aquatic organisms, wherein its anatomy allows it to sink to the bottom and find food more easily. The Amur Catfish feed during the night and go back to their caves during the day, a facet of their behavior which is linked to poor floating ability due to bladder enlargement.',
+    reserves: ['jp'],
+  },
+  {
     id: 'andalusian-barbel',
     name: 'Andalusian Barbel',
     description: 'The Andalusian Barbel is a ray-finned freshwater fish. The Andalusian Barbel is regularly found in the southern Iberian Peninsula, native to both Portugal and Spain. It inhabits the middle and lower parts of rivers, and will typically utilize any applicable location aside from small cool mountain streams. They spawn at the beginning of summer, between May and June. The males reach sexual maturity at 2-4 years of age and around 3.1 in (8 cm), whereas females reach maturity at 6-7 years and at 4.3-6.3 in (11-16 cm) in length. Despite a fairly small size for a Barbel, it has a long life, living up to 18 years.',
@@ -53,6 +59,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'ayu-sweetfish',
+    name: 'Ayu Sweetfish',
+    description: "The Ayu Sweetfish is an amphidromous fish and the only species in its genus. It is a relative of the Smelt. The name 'sweetfish' was inspired by the sweet taste of its flesh. The Sweetfish typically lives to around a year old, and as such is also written as nengyo ('year-fish') in japanese, however can live beyond two or even three years old. The ayu is the prefectural fish of Gunma and Gifu Prefectures.",
+    reserves: ['jp'],
+  },
+  {
     id: 'black-crappie',
     name: 'Black Crappie',
     description: 'The Black Crappie is a North American freshwater fish, one of the two types of crappies, along with the White Crappie. Both crappies are very similar in size, shape, and habit, except the Black Crappie is much darker, and is thought to be unlucky if it crosses your path. Crappies are typically about 4-8 in (10-20 cm) long. The maximum length reported for a Black Crappie is 19.3 in (49 cm) and the maximum published weight is under 6 lb (2.72 kg). Crappies are prolific breeders and overpopulate almost any environment they find themselves in. Female crappies produce an average of 40,000 spherical eggs, which are watched over by the male until hatched. Newly hatched fish larvae are about 0.091 in (2.32 mm) long and appear translucent. The oldest recorded age of a specimen is fifteen years, although seven years is a more typical lifespan for the species.',
@@ -67,8 +79,7 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
   {
     id: 'bluegill',
     name: 'Bluegill',
-    description:
-      "The Bluegill is a species of freshwater fish native to North America and lives in streams, rivers, lakes, and ponds. Bluegills can grow up to 12 in (30 cm) long and about 4.5 lb (2 kg). Fishermen are able to use polarized sunglasses to see through water and find bluegills' spawning beds. Bluegill have a rather bold character; many have no fear of humans, eating food dropped into the water, and a population in Canada's Lake Scugog will even allow themselves to be stroked by human observers. Bluegill are omnivores and will eat anything they can fit in their mouth. They mostly feed on small aquatic insects and fish. If food is scarce, Bluegill will also feed on aquatic vegetation and algae, and if scarce enough, will even feed on their own eggs or offspring. To capture prey, bluegills use a suction system in which they accelerate water into their mouth. Prey comes in with this water. Only a limited amount of water is able to be suctioned, so the fish must get within 0.7 in (1.8 cm) of the prey.",
+    description: "The Bluegill is a species of freshwater fish native to North America and lives in streams, rivers, lakes, and ponds. Bluegills can grow up to 12 in (30 cm) long and about 4.5 lb (2 kg). Fishermen are able to use polarized sunglasses to see through water and find bluegills' spawning beds. Bluegill have a rather bold character; many have no fear of humans, eating food dropped into the water, and a population in Canada's Lake Scugog will even allow themselves to be stroked by human observers. Bluegill are omnivores and will eat anything they can fit in their mouth. They mostly feed on small aquatic insects and fish. If food is scarce, Bluegill will also feed on aquatic vegetation and algae, and if scarce enough, will even feed on their own eggs or offspring. To capture prey, bluegills use a suction system in which they accelerate water into their mouth. Prey comes in with this water. Only a limited amount of water is able to be suctioned, so the fish must get within 0.7 in (1.8 cm) of the prey.",
     reserves: ['us'],
   },
   {
@@ -82,6 +93,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     name: 'Brook Trout',
     description: 'The Brook Trout is a species of freshwater fish, native to Eastern North America in the United States and Canada. The Brook Trout is the state fish of nine U.S. states: Michigan, New Hampshire, New Jersey, New York, North Carolina, Pennsylvania, Vermont, Virginia, and West Virginia, and the Provincial Fish of Nova Scotia in Canada. Typical lengths of the Brook Trout vary from 5.6-9.8 in (25-65 cm), and weights from 0.66 to 6.61 lb (0.3 to 3 kg). The maximum recorded length is 34 in (86 cm) and maximum weight 15 lb (6.6 kg).',
     reserves: ['us'],
+  },
+  {
+    id: 'brook-trout-jp',
+    name: 'Brook Trout',
+    description: 'The Brook Trout is a species of freshwater fish, native to Eastern North America in the United States and Canada. The Brook Trout is the state fish of nine U.S. states: Michigan, New Hampshire, New Jersey, New York, North Carolina, Pennsylvania, Vermont, Virginia, and West Virginia, and the Provincial Fish of Nova Scotia in Canada. Typical lengths of the Brook Trout vary from 5.6-9.8 in (25-65 cm), and weights from 0.66 to 6.61 lb (0.3 to 3 kg). The maximum recorded length is 34 in (86 cm) and maximum weight 15 lb (6.6 kg).',
+    reserves: ['jp'],
   },
   {
     id: 'brown-trout-no',
@@ -120,10 +137,22 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['us'],
   },
   {
+    id: 'cherry-salmon',
+    name: 'Cherry Salmon',
+    description: 'The Cherry Salmon, also known as Masu in Japan, is a species of salmon found in the Northern Pacific and associated rivers. Although generally accepted as a salmon in the West, the fish is regarded as a trout in Japan, due to it being the mostly commonly seen freshwater salmonid. A Masu Salmon at sexual maturity has a darkened back, with the stripes at the sides of the body becoming bright red, from which its name is derived. As adults, Cherry Salmon weigh up to 6 lb (2.7 kg) and measure roughly 20 in (50 cm) in length.',
+    reserves: ['jp'],
+  },
+  {
     id: 'chub',
     name: 'Chub',
     description: 'Chub is a species of freshwater Carp that is widespread throughout Europe. As a rule, Chub can be found in slow moving rivers and waterways with low current. Chub usually grow to a length of up to 2 ft (60 cm) and weigh about 3 lb (2 kg). Chub are big eaters consuming mostly insects, plants and other fish.',
     reserves: ['no'],
+  },
+  {
+    id: 'chum-salmon',
+    name: 'Chum Salmon',
+    description: "The Chum Salmon, also known as the White Salmon, Autumn Salmon or simply 'The Salmon', is a species of anadromous salmon native to the coastal rivers of the North Pacific and the Beringian Arctic. Chum Salmon has the largest natural range of any Pacific salmon, being found all around the North Pacific, off the coasts of Japan, Korea, the Russian Far East, British Columbia, and all over the United States. Chum are thought to be resistant to whirling disease.",
+    reserves: ['jp'],
   },
   {
     id: 'comizo-barbel',
@@ -162,6 +191,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['us'],
   },
   {
+    id: 'dolly-varden-trout',
+    name: 'Dolly Varden Trout',
+    description: 'The Dolly Varden Trout is a species of ray-finned fish native to the cold-water tributaries of the Pacific Ocean in Asia and North America. Despite being referred to as a trout, it belongs to a family of fish more commonly associated with the char. The first recorded use of the name \'Dolly Varden\' was used to name fish caught in the McCloud River in northern California in the early 1870s. A popular trend in fashion for women at that time was known as \'Dolly Varden\', a dress of sheer muslin worn over a bright-colored petticoat; although the exact name was taken from a character in Dickens\' novel Barnaby Rudge. The colorful markings of the fish reminded anglers of the fashion stylings of Dolly Varden, clothing the fish previously known as the Calico Trout in the garb of a new name.',
+    reserves: ['jp'],
+  },
+  {
     id: 'european-bullhead',
     name: 'European Bullhead',
     description: "The European Bullhead is a freshwater fish that is distributed all over Europe, except for the southern peninsula and northern Scandinavia. It is found mainly in rivers. The European Bullhead is also known as the miller's thumb, freshwater sculpin, common bullhead, and cob. Food items eaten by the European Bullhead include benthic insects, crustaceans and other invertebrates. It breeds in the spring, during which the male digs a shallow hole in which batches of eggs are deposited by several females. He then guards the nest for around a month so that the eggs can hatch.",
@@ -180,9 +215,15 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'feral-koi',
+    name: 'Feral Koi',
+    description: 'Koi, or more specifically Nishikigoi, are colored varieties of the Common Carp that are kept for decorative purposes in outdoor Koi ponds or water gardens. There are many varieties of ornamental Koi, originating from breeding that began in Niigata, Japan in the early 19th century. This Feral Koi must have been a descendant from such a fish breaking free from a pond or enclosure, and breeding in the wild.',
+    reserves: ['jp'],
+  },
+  {
     id: 'freshwater-drum',
     name: 'Freshwater Drum',
-    description: 'The Freshwater Drum is a fish regularly occurring in North and Central America. Its scientific name comes from the Greek for \'single back\', and the Latin for \'grunting\'. This name is derived from the grunting noise that mature males make. This noise comes from a special set of muscles within their body cavity that vibrate against their swim bladder. The purpose of the grunting is unknown, but as it is only present in mature males during the spawning season, it is assumed to have something to do with spawning. The Freshwater Drum prefers clear water, but it is tolerant of turbid and murky water.',
+    description: "The Freshwater Drum is a fish regularly occurring in North and Central America. Its scientific name comes from the Greek for 'single back', and the Latin for 'grunting'. This name is derived from the grunting noise that mature males make. This noise comes from a special set of muscles within their body cavity that vibrate against their swim bladder. The purpose of the grunting is unknown, but as it is only present in mature males during the spawning season, it is assumed to have something to do with spawning. The Freshwater Drum prefers clear water, but it is tolerant of turbid and murky water.",
     reserves: ['us'],
   },
   {
@@ -216,6 +257,30 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'japanese-dace',
+    name: 'Japanese Dace',
+    description: 'The Japanese Dace, also known as the Big-Scaled Redfin or Ugui, is a medium-sized Asian fish. It is mainly found in brackish or fresh water, and lives and feeds near the bottom, midwater or near the surface. It is an omnivore, feeding mainly on benthic invertebrates.',
+    reserves: ['jp'],
+  },
+  {
+    id: 'japanese-eel',
+    name: 'Japanese Eel',
+    description: 'The Japanese Eel is a species of Eel found in parts of East and South East Asia. It spawns in the sea, but lives part of its life in freshwater. The blood of the Japanese Eel contains a protein toxin that causes harm to mammals when ingested. Temperatures of 136-158 F (58-70C) destroy the toxin, so no special procedure is required when preparing it as foodstuff. The Japanese Eel can produce the protein UnaG, which makes it quite unique. UnaG can be used to fluorescently label cells and tag proteins.',
+    reserves: ['jp'],
+  },
+  {
+    id: 'japanese-freshwater-crab',
+    name: 'Japanese Freshwater Crab',
+    description: 'The Japanese Freshwater Crab is a crab native to Japan, that can typically be found in mountain streams. The surface of their carapace is smooth and reddish-brown, however pale brown and blue types can also be found. The Japanese Freshwater Crab mainly lives under rocks in the upper and middle reaches of rivers. They cannot survive unless the water quality is clean to some extent. In addition to eating insects and earthworms as an omnivore, it also eats plants. It breeds in the summer and is thought to live for about 10 years.',
+    reserves: ['jp'],
+  },
+  {
+    id: 'japanese-smelt',
+    name: 'Japanese Smelt',
+    description: 'The Japanese Smelt or Wakasagi, is a commercial food fish native to the lakes and estuaries of northern Honshu and Hokkaido, Japan. It has been introduced in other locations, including the San Francisco Delta of the United States. It is raised in fisheries, and is very similar in appearance to the Delta Smelt.',
+    reserves: ['jp'],
+  },
+  {
     id: 'kokanee-salmon',
     name: 'Kokanee Salmon',
     description: 'The Kokanee Salmon is the non-anadromous form of the sockeye salmon. While size range of Kokanee is often lake-specific and depends on many factors, in typical populations the Kokanee grows to an average size of 9-12 in (23-30 cm) with an average weight of 1 lb (0.5 kg). Kokanee are very sensitive to water temperatures, and cannot survive in non-optimal temperatures. Because their regular food is so small, the general understanding of angling for Kokanee is to irritate the fish enough so that it strikes your lure out of anger rather than as a predator.',
@@ -246,6 +311,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['sa'],
   },
   {
+    id: 'magoi',
+    name: 'Magoi',
+    description: 'Koi are descendants of the common carp, introduced to Japan for use in trade and as a foodstuff. Today, the Japanese term for a wild carp is Magoi. The three naturally occurring color mutations of the wild carp are Tetsu (Iron Gray), Doro (Mud Brown), and Asagi (Light Blue).',
+    reserves: ['jp'],
+  },
+  {
     id: 'mirror-carp-es',
     name: 'Mirror Carp',
     description: "Mirror Carp, regionally known as Israeli carp, are a type of fish commonly found in Europe. Their name originates from the reflective quality of their scales. They can grow in excess of 60 lb (27 kg), with the last few British record fish all being Mirror Carp. A population of Mirror Carp in Madagascar was found to have reverted to full scale 'mirror' cover after being introduced from France in the early twentieth century. The feral Carp still possessed large scales due to their mirror phenotype, but had increased scale coverage approaching that of wild-type Carp.",
@@ -270,6 +341,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['us'],
   },
   {
+    id: 'mozambique-tilapia',
+    name: 'Mozambique Tilapia',
+    description: 'The Mozambique Tilapia, also known as the Blue Kurper in South Africa, is a freshwater bream. Native to southeastern South Africa, human introductions have spread the species to many habitats across the world. A robust and hardy species, the Mozambique Tilapia is a popular fish for aquaculture.',
+    reserves: ['jp'],
+  },
+  {
     id: 'northern-pike-es',
     name: 'Northern Pike',
     description: "The Northern Pike is a species of carnivorous fish of the genus Esox. Pike can grow to a relatively large size: the average length is 16-22 in (41-55 cm), with maximum recorded lengths of up to 69 in (175 cm) and published weights of 65 lb (29 kg). The northern pike gets its common name from its resemblance to the pole-weapon. In Finnish epic poetry, a wise demigod creates a magical string instrument from the jawbone of a giant pike. Pike is generally known as a 'sporting' quarry and is very exciting, with aggressive hits and aerial acrobatics. In recent decades, more pike are released back to the water after catching, but they can easily be damaged when handled. Handling those fish with dry hands can easily damage their mucus-covered skin and possibly lead to their deaths from infections. In Finland, catching a pike weighing at least 22 lb (10 kg) is considered the qualification as a master fisherman.",
@@ -288,10 +365,22 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['us'],
   },
   {
+    id: 'northern-snakehead',
+    name: 'Northern Snakehead',
+    description: 'The Northern Snakehead is a species of snakehead native to East Asia, China, Russia, North Korea, and South Korea. It is an important food fish and one of the most cultivated in its native region, with an estimated 500 tons produced every year for food in Korea. The Northern Snakehead can double its population in as little as 15 years, and as such can be highly invasive.',
+    reserves: ['jp'],
+  },
+  {
     id: 'ohrid-trout',
     name: 'Ohrid Trout',
     description: 'The Ohrid Trout or the Lake Ohrid Brown Trout is a species of trout originating from Lake Ohrid, North Macedonia/Albania, in its tributaries and outlets. The Ohrid Trout is a specialty in Macedonian and Albanian gastronomy, used for soups and other dishes. It tastes like Brown Trout crossed with Atlantic Salmon. The Ohrid Trout is depicted on the Macedonian 2 denars coin, issued in 1993.',
     reserves: ['us'],
+  },
+  {
+    id: 'pond-loach',
+    name: 'Pond Loach',
+    description: "The Pond Loach, also known as the Dojo Loach, Oriental Weatherloach or Oriental Weatherfish, is a freshwater fish in the loach family. The 'weather' moniker comes from their ability to detect changes in barometric pressure before a storm and react accordingly. Unlike most other fish, the Pond Loach can burrow into, and hide in, soft sediment, breathe atmospheric air through their posterior canal, and thus survive for long periods of time outside the water.",
+    reserves: ['jp'],
   },
   {
     id: 'pumpkinseed',
@@ -308,9 +397,14 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
   {
     id: 'rainbow-trout',
     name: 'Rainbow Trout',
-    description:
-      'The Rainbow Trout is a trout native to cold-water tributaries of the Pacific Ocean in Asia and North America. Adult freshwater stream Rainbow Trout average between 1-5 lb (0.4-2.2 kg), while lake-dwelling and anadromous forms may reach 20 lb (9 kg). Coloration varies widely based on subspecies, forms and habitat. Adult fish are distinguished by a broad reddish stripe along the lateral line, from gills to the tail, which is most vivid in breeding males. Rainbow Trout are predators with a varied diet and will eat nearly anything they can capture. Rainbow Trout, including juvenile steelhead in fresh water, routinely feed on larval, pupal and adult forms of aquatic insects. They also eat fish eggs and adult forms of terrestrial insects that fall into the water. Rainbow Trout and Steelhead are highly regarded game fish. Rainbow Trout are a popular target for fly fishers, and several angling methods are used. Many anglers consider the Rainbow Trout the hardest-fighting trout species, as this fish is known for leaping when hooked and putting up a powerful struggle. It is considered one of the top five sport fish in North America and the most important game fish west of the Rocky Mountains.',
+    description: 'The Rainbow Trout is a trout native to cold-water tributaries of the Pacific Ocean in Asia and North America. Adult freshwater stream Rainbow Trout average between 1-5 lb (0.4-2.2 kg), while lake-dwelling and anadromous forms may reach 20 lb (9 kg). Coloration varies widely based on subspecies, forms and habitat. Adult fish are distinguished by a broad reddish stripe along the lateral line, from gills to the tail, which is most vivid in breeding males. Rainbow Trout are predators with a varied diet and will eat nearly anything they can capture. Rainbow Trout, including juvenile steelhead in fresh water, routinely feed on larval, pupal and adult forms of aquatic insects. They also eat fish eggs and adult forms of terrestrial insects that fall into the water. Rainbow Trout and Steelhead are highly regarded game fish. Rainbow Trout are a popular target for fly fishers, and several angling methods are used. Many anglers consider the Rainbow Trout the hardest-fighting trout species, as this fish is known for leaping when hooked and putting up a powerful struggle. It is considered one of the top five sport fish in North America and the most important game fish west of the Rocky Mountains.',
     reserves: ['us'],
+  },
+  {
+    id: 'rainbow-trout-jp',
+    name: 'Rainbow Trout',
+    description: 'The Rainbow Trout is a trout native to cold-water tributaries of the Pacific Ocean in Asia and North America. Adult freshwater stream Rainbow Trout average between 1-5 lb (0.4-2.2 kg), while lake-dwelling and anadromous forms may reach 20 lb (9 kg). Coloration varies widely based on subspecies, forms and habitat. Adult fish are distinguished by a broad reddish stripe along the lateral line, from gills to the tail, which is most vivid in breeding males. Rainbow Trout are predators with a varied diet and will eat nearly anything they can capture. Rainbow Trout, including juvenile steelhead in fresh water, routinely feed on larval, pupal and adult forms of aquatic insects. They also eat fish eggs and adult forms of terrestrial insects that fall into the water. Rainbow Trout and Steelhead are highly regarded game fish. Rainbow Trout are a popular target for fly fishers, and several angling methods are used. Many anglers consider the Rainbow Trout the hardest-fighting trout species, as this fish is known for leaping when hooked and putting up a powerful struggle. It is considered one of the top five sport fish in North America and the most important game fish west of the Rocky Mountains.',
+    reserves: ['jp'],
   },
   {
     id: 'redbreast-kurper',
@@ -323,6 +417,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     name: 'Rednose Labeo',
     description: 'The Rednose Labeo is a bottom-dwelling African Carp. They can be found in shallow areas, but mainly inhabit deep waters. They tend to reach about 10 in (27 cm) long at maturity, however have been known to reach over 20 in (49 cm) in length and 8 lb (3.6 kg) in weight. Rednose Labeo feed in schools across muddy and rocky bottoms, consuming algae, worms, small crustaceans, and mollusks.',
     reserves: ['sa'],
+  },
+  {
+    id: 'river-carpsucker',
+    name: 'River Carpsucker',
+    description: 'The River Carpsucker is a well-known bottom feeder. They eat and filter nutrients from silt and detritus, making them a suction or filter feeder. In the spring, they migrate upstream as the water temperatures rises, and move back downstream after spawning. They have been known to travel distances of up to 6.2 mi (10 km). They are more abundant in areas with calm water and moderate temperatures.',
+    reserves: ['us'],
   },
   {
     id: 'roach-es',
@@ -355,6 +455,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     reserves: ['no'],
   },
   {
+    id: 'sakhalin-taimen',
+    name: 'Sakhalin Taimen',
+    description: 'The Sakhalin Taimen also known as the Japanese Huchen or Stringfish, is a large species of freshwater fish found in the lakes and large rivers of Far Eastern Russia and Hokkaido, Japan. Their population has dwindled, leading to them becoming critically endangered. The loss of more than half of their original habitat due to agriculture, urbanization, and oil and gas development has provided significant pressure to the population of the species. Other considerable pressures include bycatch in the commercial salmon fisheries of Russia and Japan, as well as illegal fishing practices. In Japan, this species is bred for game-fishing at fish farms, and are available for purchase.',
+    reserves: ['jp'],
+  },
+  {
     id: 'sauger',
     name: 'Sauger',
     description: 'The Sauger is a freshwater fish that resembles its close relative, the walleye. The typical sauger is 11-14 oz (0.3-0.4 kg) in weight. Saugers require warmer summer water temperatures of 68-83 F (20-28 C). Their need for warm water is thought to affect the northern and western boundaries of their range. Saugers feed on a variety of invertebrates and small fishes depending on the time of year and size of the Sauger. The channel catfish is a classic prey of the Sauger. Saugers are more likely to be found in large rivers with deep pools. They encounter a variety of habitats because of their migratory tendencies.',
@@ -364,6 +470,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     id: 'shovelnose-sturgeon',
     name: 'Shovelnose Sturgeon',
     description: 'The Shovelnose Sturgeon is the smallest species of freshwater sturgeon native to North America. Sturgeons are highly regarded for their flesh and their roe, which are used to create premium grades of caviar. In 2010, they were listed as threatened under the U.S. Endangered Species Act due to their resemblance to the endangered Pallid Sturgeon. They can reach up to 39 in (1 m) in length and 11 lb (4.8 kg) in weight.',
+    reserves: ['us'],
+  },
+  {
+    id: 'signal-crayfish',
+    name: 'Signal Crayfish',
+    description: 'The Signal Crayfish is a North American species of Crayfish that has been introduced to Europe and Asia as an invasive species. It was introduced to Europe in the 1960s to bolster crayfish reserves that were being damaged by crayfish plague, however the imports turned out to be a carrier of the plague. They are blue-brown to red-brown in color, with robust, large, smooth claws. They have a white patch near their claw hinge, similar to the white flags that signalmen used for directing trains, from which they derive their name.',
     reserves: ['us'],
   },
   {
@@ -383,6 +495,12 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
     name: 'Smallmouth Yellowfish',
     description: 'The Smallmouth Yellowfish is a species of ray-finned fish, which is an invasive species in rivers of the Eastern Cape, South Africa. They are a hardy and adaptable species that are widespread across their natural distribution range. They have the ability to inhabit smaller streams due to their smaller size. Smallmouth Yellowfish are opportunistic feeders, reaching a mass of around 20 lb (9 kg) and eating a variety of food types, ranging from plant material to aquatic insects, crabs, shrimps and small fish.',
     reserves: ['sa'],
+  },
+  {
+    id: 'sockeye-salmon',
+    name: 'Sockeye Salmon',
+    description: 'The Sockeye Salmon, also called Red Salmon, Blueback Salmon, or simply Sockeye, is a species of salmon found in the Northern Pacific Ocean and associated rivers. This species is primarily red in hue during spawning, growing up to 33 in (84 cm) in length and weighing up to 15 lb (7 kg). Their diet consists primarily of zooplankton. Some populations, referred to as kokanee, do not migrate to the ocean and live their entire lives in fresh water.',
+    reserves: ['jp'],
   },
   {
     id: 'spotted-bass',
@@ -429,8 +547,14 @@ const fishes: Omit<Fish<FishIdGeneric>, 'image'>[] = [
   {
     id: 'white-crappie',
     name: 'White Crappie',
-    description: 'The White Crappie is a freshwater fish found in North America, and is one of the two species of Crappies along with the Black Crappie. They are also known as the goldring, a name derived from the vaguely vertical bars or \'rings\' along their bodies, silver perch, white perch and sac-a-lait. White crappies can be found in large rivers, reservoirs, and lakes, and are more tolerant of turbid waters than Black Crappies, in which they normally outnumber their black brethren. The ship USS Goldring is named after the fish.',
+    description: "The White Crappie is a freshwater fish found in North America, and is one of the two species of Crappies along with the Black Crappie. They are also known as the goldring, a name derived from the vaguely vertical bars or 'rings' along their bodies, silver perch, white perch and sac-a-lait. White crappies can be found in large rivers, reservoirs, and lakes, and are more tolerant of turbid waters than Black Crappies, in which they normally outnumber their black brethren. The ship USS Goldring is named after the fish.",
     reserves: ['us'],
+  },
+  {
+    id: 'white-spotted-char',
+    name: 'White Spotted Char',
+    description: 'The Whitespotted Char is an East Asian trout, known as iwana in Japan. The fish can be both landlocked and ocean-run, with the landlocked form typically growing up to 14 in (35 cm), preferring low-temperature streams. The seagoing fish typically grows to 28 in (70 cm) long. The Whitespotted Char is a carnivore, feeding on insects and plankton.',
+    reserves: ['jp'],
   },
   {
     id: 'yellow-perch',

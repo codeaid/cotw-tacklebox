@@ -1,6 +1,8 @@
 import type { ReserveId } from 'types/reserves';
 import logoES from './logo_es.png';
 import logoES_BW from './logo_es_bw.png';
+import logoJP from './logo_jp.png';
+import logoJP_BW from './logo_jp_bw.png';
 import logoNO from './logo_no.png';
 import logoNO_BW from './logo_no_bw.png';
 import logoSA from './logo_sa.png';
@@ -10,6 +12,7 @@ import logoUS_BW from './logo_us_bw.png';
 
 const map: Record<ReserveId, { bw: string; color: string }> = {
   es: { bw: logoES_BW.src, color: logoES.src },
+  jp: { bw: logoJP_BW.src, color: logoJP.src },
   no: { bw: logoNO_BW.src, color: logoNO.src },
   sa: { bw: logoSA_BW.src, color: logoSA.src },
   us: { bw: logoUS_BW.src, color: logoUS.src },

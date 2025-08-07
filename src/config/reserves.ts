@@ -35,6 +35,14 @@ const baseReserves: Omit<Reserve, 'image'>[] = [
     location: 'Mpumalanga province',
     slug: 'izilo-zasendulo',
   },
+  {
+    id: 'jp',
+    name: 'Kamuibetsu',
+    shortName: 'Kamuibetsu',
+    description: 'Kamuibetsu is a small, remote town in the north of Hokkaido, Japan; however as of right now, the country\'s premier fishing resort too! Take in the sights, sounds and tastes of autumn life, plant seeds for spring and give thanks for the here and now, because winters round here are long and relentless.',
+    location: 'Hokkaido, Japan',
+    slug: 'kamuibetsu',
+  },
 ];
 
 export const reserves: Reserve[] = baseReserves.map(base => ({

@@ -4,6 +4,7 @@ import ambusher from './ambusher.png';
 import bottomLurker from './bottom_lurker.png';
 import daredevil from './daredevil.png';
 import deepSpeech from './deep_speech.png';
+import dragonsGate from './dragons_gate.png';
 import eagleEyed from './eagle_eyed.png';
 import easilySpooked from './easily_spooked.png';
 import evilEye from './evil_eye.png';
@@ -12,6 +13,7 @@ import jumper from './jumper.png';
 import keenSenses from './keen_senses.png';
 import lastStand from './last_stand.png';
 import nightOwl from './night_owl.png';
+import otashitonkurusRock from './otashitonkurus_rock.png';
 import patientScavenger from './patient_scavenger.png';
 import risingSun from './rising_sun.png';
 import runForYourMoney from './run_for_your_money.png';
@@ -19,6 +21,7 @@ import sirenSong from './siren_song.png';
 import socialDistancing from './social_distancing.png';
 import sunLover from './sun_lover.png';
 import superiorityComplex from './superiority_complex.png';
+import theDeepestReaches from './the_deepest_reaches.png';
 
 const map: Record<TraitId, string> = {
   'aggressive': aggressive.src,
@@ -26,6 +29,7 @@ const map: Record<TraitId, string> = {
   'bottom-lurker': bottomLurker.src,
   'daredevil': daredevil.src,
   'deep-speech': deepSpeech.src,
+  'dragons-gate': dragonsGate.src,
   'eagle-eyed': eagleEyed.src,
   'easily-spooked': easilySpooked.src,
   'evil-eye': evilEye.src,
@@ -34,6 +38,7 @@ const map: Record<TraitId, string> = {
   'keen-senses': keenSenses.src,
   'last-stand': lastStand.src,
   'night-owl': nightOwl.src,
+  'otashitonkurus-rock': otashitonkurusRock.src,
   'patient-scavenger': patientScavenger.src,
   'rising-sun': risingSun.src,
   'run-for-your-money': runForYourMoney.src,
@@ -41,6 +46,7 @@ const map: Record<TraitId, string> = {
   'social-distancing': socialDistancing.src,
   'sun-lover': sunLover.src,
   'superiority-complex': superiorityComplex.src,
+  'the-deepest-reaches': theDeepestReaches.src,
 };
 
 export default map;

@@ -4,6 +4,7 @@ export const traitIds = [
   'bottom-lurker',
   'daredevil',
   'deep-speech',
+  'dragons-gate',
   'eagle-eyed',
   'easily-spooked',
   'evil-eye',
@@ -12,6 +13,7 @@ export const traitIds = [
   'keen-senses',
   'last-stand',
   'night-owl',
+  'otashitonkurus-rock',
   'patient-scavenger',
   'rising-sun',
   'run-for-your-money',
@@ -19,6 +21,7 @@ export const traitIds = [
   'social-distancing',
   'sun-lover',
   'superiority-complex',
+  'the-deepest-reaches',
 ] as const;
 
 export type TraitId = (typeof traitIds)[number];
