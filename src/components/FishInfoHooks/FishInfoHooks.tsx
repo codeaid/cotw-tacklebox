@@ -12,20 +12,24 @@ export const FishInfoHooks = (props: FishInfoHooksProps) => {
         [styles.FishInfoHooksCompact]: compact,
       })}
     >
-      {hookSizes.map(size => (
-        <div
-          className={clsx(styles.FishInfoHooksCell, {
-            [styles.FishInfoHooksCellBronze]: data[size] === 'b',
-            [styles.FishInfoHooksCellSilver]: data[size] === 's',
-            [styles.FishInfoHooksCellGold]: data[size] === 'g',
-            [styles.FishInfoHooksCellDiamond]: data[size] === 'd',
-            [styles.FishInfoHooksCellLegendary]: data[size] === 'l',
-          })}
-          key={size}
-        >
-          {size}
-        </div>
-      ))}
+      {hookSizes.map(size => {
+        const value = typeof data !== 'undefined' && size in data ? data[size] : null;
+
+        return (
+          <div
+            className={clsx(styles.FishInfoHooksCell, {
+              [styles.FishInfoHooksCellBronze]: value === 'b',
+              [styles.FishInfoHooksCellSilver]: value === 's',
+              [styles.FishInfoHooksCellGold]: value === 'g',
+              [styles.FishInfoHooksCellDiamond]: value === 'd',
+              [styles.FishInfoHooksCellLegendary]: value === 'l',
+            })}
+            key={size}
+          >
+            {size}
+          </div>
+        );
+      })}
     </div>
   );
 };
