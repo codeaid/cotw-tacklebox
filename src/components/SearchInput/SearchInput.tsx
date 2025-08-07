@@ -156,7 +156,6 @@ export const SearchInput = () => {
     // Render search results inside the layout to enable showing them in full-screen view
     if (isMediumViewLT) {
       const pageElement = document.getElementById(pageElementId);
-      console.info({ pageElement });
 
       if (pageElement) {
         const portal = createPortal(output, pageElement);
