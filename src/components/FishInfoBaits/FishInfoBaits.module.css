@@ -43,7 +43,7 @@
 .FishInfoBaitsCategoryWrapperBaits {
   display: grid;
   grid-gap: 1.5em;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /**
@@ -51,6 +51,10 @@
  */
 .FishInfoBaitsKindWrapperBottom {
   order: 3;
+}
+
+.FishInfoBaitsKindWrapperGround {
+  order: 4;
 }
 
 .FishInfoBaitsKindWrapperLive {
@@ -76,6 +80,7 @@
 }
 
 .FishInfoBaitsKindHeaderBottom,
+.FishInfoBaitsKindHeaderGround,
 .FishInfoBaitsKindHeaderLive,
 .FishInfoBaitsKindHeaderNatural {
   background-position: right 0.2em center;
@@ -85,6 +90,10 @@
 
 .FishInfoBaitsKindHeaderBottom {
   background-image: url("../../assets/baits/bottom.png");
+}
+
+.FishInfoBaitsKindHeaderGround {
+  background-image: url("../../assets/baits/ground.png");
 }
 
 .FishInfoBaitsKindHeaderLive {

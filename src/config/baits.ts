@@ -3,6 +3,7 @@ import type {
   Bait,
   BaitId,
   BaitIdBottom,
+  BaitIdGround,
   BaitIdLive,
   BaitIdNatural,
   BaitKind,
@@ -24,6 +25,16 @@ export const baitsBottom = (
   ] as Bait<BaitIdBottom>[]
 ).sort(sortByName);
 
+export const baitsGround = (
+  [
+    { id: 'advantage', name: 'Advantage' },
+    { id: 'high-impact', name: 'High Impact' },
+    { id: 'lake-mix', name: 'Lake Mix' },
+    { id: 'match-blend', name: 'Match Blend' },
+    { id: 'pro-performance', name: 'Pro Performance' },
+  ] as Bait<BaitIdGround>[]
+).sort(sortByName);
+
 export const baitsLive = (
   [
     { id: 'bloodworm', name: 'Bloodworm' },
@@ -41,7 +52,6 @@ export const baitsNatural = (
     { id: 'dough', name: 'Dough' },
     { id: 'eggs', name: 'Eggs' },
     { id: 'hotdog', name: 'Hotdog' },
-    { id: 'lake-mix', name: 'Lake Mix' },
     { id: 'liver', name: 'Liver' },
     { id: 'marshmallow', name: 'Marshmallow' },
   ] as Bait<BaitIdNatural>[]
@@ -51,6 +61,7 @@ export const baitKinds: BaitKind[] = [
   { id: 'natural', name: 'Natural' },
   { id: 'live', name: 'Live' },
   { id: 'bottom', name: 'Bottom' },
+  { id: 'ground', name: 'Ground' },
 ];
 
 export const lures = (
@@ -77,7 +88,7 @@ export const lureMethods: LureMethod[] = [
   { id: 's', name: 'Stop & Go' },
 ];
 
-export const baitMap = [...baitsBottom, ...baitsLive, ...baitsNatural].reduce(
+export const baitMap = [...baitsBottom, ...baitsGround, ...baitsLive, ...baitsNatural].reduce(
   (acc, curr) => ({
     ...acc,
     [curr.id]: curr,

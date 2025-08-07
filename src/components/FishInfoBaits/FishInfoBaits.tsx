@@ -3,7 +3,14 @@
 import clsx from 'clsx';
 import { useMemo, useState } from 'react';
 import { Option, Stepper } from 'components';
-import { baitKindMap, baitsBottom, baitsLive, baitsNatural, lures } from 'config/baits';
+import {
+  baitKindMap,
+  baitsBottom,
+  baitsGround,
+  baitsLive,
+  baitsNatural,
+  lures,
+} from 'config/baits';
 import { getFilteredBaitValues, getFilteredLureValues } from 'lib/filter';
 import type { BaitFilterType, BaitFilterValue } from 'types/baits';
 import { FishInfoBaitsBaits } from './FishInfoBaitsBaits';
@@ -42,6 +49,12 @@ export const FishInfoBaits = (props: FishInfoBaitsProps) => {
         styles.FishInfoBaitsKindWrapperBottom,
         styles.FishInfoBaitsKindHeaderBottom,
       ],
+      [
+        getFilteredBaitValues(baitsGround, filter, data),
+        baitKindMap.ground.name,
+        styles.FishInfoBaitsKindWrapperGround,
+        styles.FishInfoBaitsKindHeaderGround,
+      ],
     ],
     [data, filter],
   );
@@ -70,6 +83,7 @@ export const FishInfoBaits = (props: FishInfoBaitsProps) => {
           <FishInfoBaitsBaits
             caption={category}
             headerClassName={headerClassName}
+            key={category}
             values={values}
             wrapperClassName={wrapperClassName}
           />

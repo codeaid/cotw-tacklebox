@@ -8,6 +8,14 @@ export const baitIdsBottom = [
   'wafters-white',
 ] as const;
 
+export const baitIdsGround = [
+  'advantage',
+  'high-impact',
+  'lake-mix',
+  'match-blend',
+  'pro-performance',
+] as const;
+
 export const baitIdsLive = ['bloodworm', 'leech', 'minnow', 'redworm'] as const;
 
 export const baitIdsNatural = [
@@ -17,7 +25,6 @@ export const baitIdsNatural = [
   'dough',
   'eggs',
   'hotdog',
-  'lake-mix',
   'liver',
   'marshmallow',
 ] as const;
@@ -43,11 +50,12 @@ export type BaitChanceMap = Record<BaitId, number>;
 export type LureChanceMap = Record<LureMethodId, number>;
 
 export type BaitIdBottom = (typeof baitIdsBottom)[number];
+export type BaitIdGround = (typeof baitIdsGround)[number];
 export type BaitIdLive = (typeof baitIdsLive)[number];
 export type BaitIdNatural = (typeof baitIdsNatural)[number];
-export type BaitId = BaitIdBottom | BaitIdLive | BaitIdNatural;
+export type BaitId = BaitIdBottom | BaitIdGround | BaitIdLive | BaitIdNatural;
 
-export type BaitKindId = 'bottom' | 'live' | 'natural';
+export type BaitKindId = 'bottom' | 'ground' | 'live' | 'natural';
 export type BaitType = (typeof baitTypes)[number];
 
 export type LureMethodId = 'c' | 'j' | 's' | 't';
