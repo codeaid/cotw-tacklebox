@@ -1,7 +1,7 @@
-import type { Theme } from '@nivo/core';
+import type { PartialTheme } from '@nivo/theming';
 import { sourceSansPro } from 'fonts';
 
-export const theme: Theme = {
+export const theme: PartialTheme = {
   axis: {
     ticks: {
       line: {

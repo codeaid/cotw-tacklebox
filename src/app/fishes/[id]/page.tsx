@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { use } from 'react';
 import { Container, FishInfo } from 'components';
 import { fishes } from 'config/fishes';
 import { fishIdsGeneric, fishIdsLegendary } from 'types/fishes';
 
 interface PageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const fish = fishes.find(f => f.id === props.params.id);
+  const { id } = await props.params;
+  const fish = fishes.find(f => f.id === id);
 
   return {
     title: `${fish?.name} - TackleBox`,
@@ -23,9 +23,7 @@ export async function generateStaticParams() {
 }
 
 const FishDetailsPage = (props: PageProps) => {
-  const {
-    params: { id },
-  } = props;
+  const { id } = use(props.params);
 
   // Ensure the fish exists before continuing
   const fish = fishes.find(f => f.id === id);

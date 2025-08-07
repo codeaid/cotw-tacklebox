@@ -14,7 +14,6 @@ const nextConfig = {
       permanent: true,
     }
   ],
-  swcMinify: true,
   trailingSlash: false,
   webpack(config) {
     // Enable importing SVG images as components
