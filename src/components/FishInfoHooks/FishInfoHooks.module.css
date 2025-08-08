@@ -17,6 +17,15 @@
   text-align: center;
 }
 
+.FishInfoHooksCellJuvenile {
+  background: var(--color-rank-juvenile);
+  background: linear-gradient(
+      180deg,
+      var(--color-rank-juvenile-dark) 0%,
+      var(--color-rank-juvenile) 100%);
+  color: var(--font-color);
+}
+
 .FishInfoHooksCellBronze {
   background: var(--color-rank-bronze);
   background: linear-gradient(
@@ -68,6 +77,10 @@
   opacity: 0.8;
 }
 
+.FishInfoHooksCompact .FishInfoHooksCellJuvenile {
+  background: var(--color-rank-juvenile-dark);
+}
+
 .FishInfoHooksCompact .FishInfoHooksCellBronze {
   background: var(--color-rank-bronze-dark);
 }
@@ -88,6 +101,7 @@
   background: var(--color-rank-legendary-dark);
 }
 
+.FishInfoHooksCompact .FishInfoHooksCellJuvenile,
 .FishInfoHooksCompact .FishInfoHooksCellBronze,
 .FishInfoHooksCompact .FishInfoHooksCellSilver,
 .FishInfoHooksCompact .FishInfoHooksCellGold,

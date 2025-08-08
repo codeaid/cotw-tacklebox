@@ -18,6 +18,7 @@ export const FishInfoHooks = (props: FishInfoHooksProps) => {
         return (
           <div
             className={clsx(styles.FishInfoHooksCell, {
+              [styles.FishInfoHooksCellJuvenile]: value === 'j',
               [styles.FishInfoHooksCellBronze]: value === 'b',
               [styles.FishInfoHooksCellSilver]: value === 's',
               [styles.FishInfoHooksCellGold]: value === 'g',
